@@ -622,7 +622,7 @@ overflow: hidden;
   background-repeat: no-repeat;
   height: 0px;
   width: 100%;
-  padding-top: 56.25%;
+  padding-top:66.25%;
 }
 /* POSTS FEED POST TEXT AND AVATAR */
 
@@ -1485,7 +1485,7 @@ padding:0;
       margin-right: 80px;
     }
     .blog-featured .feed-post-thumb {
-    width: 220px;
+    width: 175px;
   }
     .blog-featured .items-row{
       grid-template-columns:1fr 1fr!important;
