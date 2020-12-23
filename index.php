@@ -82,7 +82,7 @@ else {
 
 
       </div>
-      <div class="bg-gradient bg-gradient-revert">    
+      <div class="bg-gradient bg-gradient-revert">
       </div>
 </section>  <!-- livefeed-featured section -->
 <?php $app = JFactory::getApplication();
