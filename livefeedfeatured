@@ -1,0 +1,24 @@
+<section class="section section-gray" id="livefeed-featured-section">
+  <div id="livefeed-featured" class="container">
+    <!-- Twitch player -->
+
+    <div class="live-player-container">
+    <div class="iframe-container">
+      <iframe class="iframe" src="https://player.twitch.tv/?channel=onegreatworknetwork&parent=&parent=" frameborder="0" allowfullscreen="true" scrolling="no" width="100%" height="300px"></iframe>
+    </div>
+    <div class="live-title">
+    </div>
+</div>
+  <!-- Featured Content -->
+<div class="feed-container container" id="featured-container">
+
+    <div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
+
+
+    </div><!-- #primary-sidebar -->
+
+</div>  <!-- feed-container -->
+
+
+</div>  <!-- livefeed-featured container -->
+</section>  <!-- livefeed-featured section -->
