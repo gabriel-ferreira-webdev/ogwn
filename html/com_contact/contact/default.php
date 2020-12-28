@@ -19,17 +19,6 @@ $tparams = $this->item->params;
 		</h1>
 	<?php endif; ?>
 
-	<?php if ($this->contact->name && $tparams->get('show_name')) : ?>
-		<div class="page-header">
-			<h2>
-				<?php if ($this->item->published == 0) : ?>
-					<span class="label label-warning"><?php echo JText::_('JUNPUBLISHED'); ?></span>
-				<?php endif; ?>
-				<span class="contact-name" itemprop="name"><?php echo $this->contact->name; ?></span>
-			</h2>
-		</div>
-	<?php endif; ?>
-
 	<?php $show_contact_category = $tparams->get('show_contact_category'); ?>
 
 	<?php if ($show_contact_category === 'show_no_link') : ?>
@@ -64,49 +53,6 @@ $tparams = $this->item->params;
 	<?php $presentation_style = $tparams->get('presentation_style'); ?>
 	<?php $accordionStarted = false; ?>
 	<?php $tabSetStarted = false; ?>
-
-	<?php if ($this->params->get('show_info', 1)) : ?>
-		<?php if ($presentation_style === 'sliders') : ?>
-			<?php echo JHtml::_('bootstrap.startAccordion', 'slide-contact', array('active' => 'basic-details')); ?>
-			<?php $accordionStarted = true; ?>
-			<?php echo JHtml::_('bootstrap.addSlide', 'slide-contact', JText::_('COM_CONTACT_DETAILS'), 'basic-details'); ?>
-		<?php elseif ($presentation_style === 'tabs') : ?>
-			<?php echo JHtml::_('bootstrap.startTabSet', 'myTab', array('active' => 'basic-details')); ?>
-			<?php $tabSetStarted = true; ?>
-			<?php echo JHtml::_('bootstrap.addTab', 'myTab', 'basic-details', JText::_('COM_CONTACT_DETAILS')); ?>
-		<?php elseif ($presentation_style === 'plain') : ?>
-			<?php echo '<h3>' . JText::_('COM_CONTACT_DETAILS') . '</h3>'; ?>
-		<?php endif; ?>
-
-		<?php if ($this->contact->image && $tparams->get('show_image')) : ?>
-			<div class="thumbnail pull-right">
-				<?php echo JHtml::_('image', $this->contact->image, htmlspecialchars($this->contact->name,  ENT_QUOTES, 'UTF-8'), array('itemprop' => 'image')); ?>
-			</div>
-		<?php endif; ?>
-
-		<?php if ($this->contact->con_position && $tparams->get('show_position')) : ?>
-			<dl class="contact-position dl-horizontal">
-				<dt><?php echo JText::_('COM_CONTACT_POSITION'); ?>:</dt>
-				<dd itemprop="jobTitle">
-					<?php echo $this->contact->con_position; ?>
-				</dd>
-			</dl>
-		<?php endif; ?>
-
-		<?php echo $this->loadTemplate('address'); ?>
-
-		<?php if ($tparams->get('allow_vcard')) : ?>
-			<?php echo JText::_('COM_CONTACT_DOWNLOAD_INFORMATION_AS'); ?>
-			<a href="<?php echo JRoute::_('index.php?option=com_contact&amp;view=contact&amp;id=' . $this->contact->id . '&amp;format=vcf'); ?>">
-			<?php echo JText::_('COM_CONTACT_VCARD'); ?></a>
-		<?php endif; ?>
-
-		<?php if ($presentation_style === 'sliders') : ?>
-			<?php echo JHtml::_('bootstrap.endSlide'); ?>
-		<?php elseif ($presentation_style === 'tabs') : ?>
-			<?php echo JHtml::_('bootstrap.endTab'); ?>
-		<?php endif; ?>
-	<?php endif; ?>
 
 	<?php if ($tparams->get('show_email_form') && ($this->contact->email_to || $this->contact->user_id)) : ?>
 		<?php if ($presentation_style === 'sliders') : ?>
@@ -183,35 +129,7 @@ $tparams = $this->item->params;
 		<?php endif; ?>
 	<?php endif; ?>
 
-	<?php if ($tparams->get('show_profile') && $this->contact->user_id && JPluginHelper::isEnabled('user', 'profile')) : ?>
-		<?php if ($presentation_style === 'sliders') : ?>
-			<?php if (!$accordionStarted)
-			{
-				echo JHtml::_('bootstrap.startAccordion', 'slide-contact', array('active' => 'display-profile'));
-				$accordionStarted = true;
-			}
-			?>
-			<?php echo JHtml::_('bootstrap.addSlide', 'slide-contact', JText::_('COM_CONTACT_PROFILE'), 'display-profile'); ?>
-		<?php elseif ($presentation_style === 'tabs') : ?>
-			<?php if (!$tabSetStarted)
-			{
-				echo JHtml::_('bootstrap.startTabSet', 'myTab', array('active' => 'display-profile'));
-				$tabSetStarted = true;
-			}
-			?>
-			<?php echo JHtml::_('bootstrap.addTab', 'myTab', 'display-profile', JText::_('COM_CONTACT_PROFILE')); ?>
-		<?php elseif ($presentation_style === 'plain') : ?>
-			<?php echo '<h3>' . JText::_('COM_CONTACT_PROFILE') . '</h3>'; ?>
-		<?php endif; ?>
-
-		<?php echo $this->loadTemplate('profile'); ?>
-
-		<?php if ($presentation_style === 'sliders') : ?>
-			<?php echo JHtml::_('bootstrap.endSlide'); ?>
-		<?php elseif ($presentation_style === 'tabs') : ?>
-			<?php echo JHtml::_('bootstrap.endTab'); ?>
-		<?php endif; ?>
-	<?php endif; ?>
+	<?php echo $this->loadTemplate('profile'); ?>
 
 	<?php if ($tparams->get('show_user_custom_fields') && $this->contactUser) : ?>
 		<?php echo $this->loadTemplate('user_custom_fields'); ?>
