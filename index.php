@@ -20,7 +20,7 @@
 </a>
         <a href="<?php echo $this->baseurl; ?>" class="title-img"></a>
 
-        <form action="/" method="get" id="searchform" class="header-searchform">
+        <div id="searchform" class="header-searchform">
           <input type="checkbox" name="search-cb" id="search-cb" onclick="noScrollOnMenuOpen(this)" />
           <label id="search-cb-label" for="search-cb">
             <div class="search-open"></div>
@@ -29,11 +29,8 @@
           <div class="search-bg-mb" id="search-bg-mb">
             <!-- <input type="text" name="s" id="search" placeholder="Search" size="17" value="" /> -->
       <jdoc:include type="modules" name="search"/>
-            <button type="submit" id="search-button">
-              <?php include("img/icons/search.svg"); ?>
-            </button>
           </div>
-        </form>
+        </div>
 
         <label for="search-cb" class="fade" id="fadesearch"></label>
 

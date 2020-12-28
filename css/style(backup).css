@@ -241,16 +241,9 @@ height: 24px;
 #search-cb {
   display: none;
 }
-.search{
-  width:calc(100% - 1rem);
-  margin:0 auto;
-}
-.form-inline{
-  width:100%;
-  position: relative;
-}
-.search .form-inline .search-query {
-  width:calc(100% - 24px);
+
+#search {
+  width: calc(100% - 12px - 24px - 1.5rem);
   font-size: 1.3rem;
   color: white;
   background: none;
@@ -258,14 +251,7 @@ height: 24px;
   border-bottom: 1px solid #423f7b;
   padding: 0.4rem;
 }
-.search .form-inline .button{
-  position: relative;right:0;
-  vertical-align: middle;
-  width::24px;
-  height:24px;
 
-}
-.search .form-inline .element-invisible{display:none;}
 #searchform {
   margin-left: auto;
 }
@@ -1027,7 +1013,6 @@ footer .container ul li {
 }
 .item-page img{
   max-width:100%;
-  height:auto;
 }
 /* EMBEDS */
 /* YOUTUBE */
@@ -1166,17 +1151,9 @@ float:right;
 .blog-featured .items-row{
   grid-template-columns:1fr!important;
 }
-.blog-featured .feed-post-thumb{
-  width:180px;
-  float:left;
 
-}
-.blog-featured .item-title{
-  margin-left:0;
-}
 .blog-featured .article-info, .blog-featured .item-title{
-  width:calc(100% - 12px);
-  margin:0;
+  width:calc(100% - 18px);
 }
 .blog-featured .article-info dd{
 padding:0;
@@ -1293,20 +1270,11 @@ padding:0;
     display: inline;
     position: static;
   }
-  .search .form-inline .search-query{
-    padding:0;
-    display: inline;
-vertical-align: middle;
-  }
-  .search .form-inline .button{
-    margin-left:.5rem;
-  }
-  .search{
-    width:calc(100% - 24px - 1rem);
-    margin-left:0;
-    padding-top:3px;
-  }
   #search-bg-mb{
+  position: absolute;
+      left:0px;;
+      top:0;
+  width:100%;
     display:none;
     padding:0;
   }
@@ -1508,17 +1476,9 @@ vertical-align: middle;
     #hamitems .menu>li,  #searchform {
       margin-right: 80px;
     }
-    .blog-featured .feed-post-thumb {
-    width: 175px;
-  }
-    .blog-featured .items-row{
-      grid-template-columns:1fr 1fr!important;
-    }
-    .player-title{
-      width:51%;
-    }
-    .blog-featured{
-      width:48%;
+
+    .blog-featured .items-row {
+      grid-template-columns: 1fr 1fr !important;
     }
 }
 
