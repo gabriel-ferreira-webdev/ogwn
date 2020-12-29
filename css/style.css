@@ -621,10 +621,16 @@ main .container {
 }
 
 .feed-post .item-title {
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-left: 0.5rem;
-  margin-bottom: 0.5rem;
   overflow: hidden;
+}
+
+.feed-post .author {
+  font-size: 1rem;
+  margin-left: 0.5rem;
+  margin-bottom: 0.3rem;
+  font-style: italic;
 }
 
 .feed-post-thumb-a, .item-image a {
@@ -1665,6 +1671,6 @@ ul.social-icons li {
   mask-size: cover;
 }
 
-.feed-post a {
+.feed-post > a {
   display: block;
 }
