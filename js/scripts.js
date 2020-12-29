@@ -60,30 +60,30 @@ function noScrollOnMenuOpen(checkbox) {
 //
 // })(jQuery);
 
-document.onload = setColumns();
-
-function setColumns(){
-  var row = document.querySelector('.items-row');
-  var rows = document.getElementsByClassName('items-row');
-  var numCol;
-  var numColF;
-  var gridStr = '';
-  for (var x = 0; x < row.classList.length; x++) {
-    if (row.classList[x].substring(0,4) == "cols") {
-       numCol = row.classList[x].slice(5);
-       numColF = parseFloat(numCol);
-      console.log(numColF);
-    }}
-    for (var z = 0; z < numColF; z++) {
-      gridStr = gridStr + " 1fr";
-    }
-for (var i = 0; i < rows.length; i++) {
-rows[i].style.gridTemplateColumns = gridStr;
-
-
-
-console.log(gridStr);
-
-}
-
-};
+// document.onload = setColumns();
+//
+// function setColumns(){
+//   var row = document.querySelector('.items-row');
+//   var rows = document.getElementsByClassName('items-row');
+//   var numCol;
+//   var numColF;
+//   var gridStr = '';
+//   for (var x = 0; x < row.classList.length; x++) {
+//     if (row.classList[x].substring(0,4) == "cols") {
+//        numCol = row.classList[x].slice(5);
+//        numColF = parseFloat(numCol);
+//       console.log(numColF);
+//     }}
+//     for (var z = 0; z < numColF; z++) {
+//       gridStr = gridStr + " 1fr";
+//     }
+// for (var i = 0; i < rows.length; i++) {
+// rows[i].style.gridTemplateColumns = gridStr;
+//
+//
+//
+// console.log(gridStr);
+//
+// }
+//
+// };

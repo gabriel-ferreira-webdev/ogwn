@@ -559,7 +559,7 @@ main .container {
 }
 
 /* POSTS FEED  */
-.primary-sidebar div>nav {
+/* .primary-sidebar div>nav {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
   grid-gap: 1rem;
@@ -567,7 +567,7 @@ main .container {
   list-style: none;
   padding: .5rem 0;
   margin: 0 auto;
-}
+} */
 
 .alm-listing {
   margin: 0;
@@ -576,11 +576,10 @@ main .container {
 
 .feed-posts {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(275px,1fr));
   grid-gap: 1rem;
   justify-content: center;
   list-style: none;
-  padding: 1rem 0;
   margin: 0 auto;
   overflow: hidden;
 }
@@ -1098,7 +1097,12 @@ footer .container ul li {
 
   .items-row {
     display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(275px,1fr));
     grid-gap: 1rem;
+    justify-content: center;
+    list-style: none;
+    margin: 0 auto;
+    overflow: hidden
   }
 
   .items-row>.span4 {
@@ -1198,31 +1202,25 @@ footer .container ul li {
   }
 
   .blog-featured {
+    position: relative;
     width: 33%;
     float: right;
+    height: 0;
+padding-top: 37%;
+overflow-y:scroll;
   }
+.blog-featured .items-row{
+  position: absolute;top:0;width:100%;
+}
 
-  .blog-featured .items-row {
-    grid-template-columns: 1fr !important;
-  }
+.blog-featured .feed-post-thumb{
+  width:100%;
+}
 
-  .blog-featured .feed-post-thumb {
-    width: 180px;
-    float: left;
-  }
 
-  .blog-featured .item-title {
-    margin-left: 0;
-  }
 
-  .blog-featured .article-info, .blog-featured .item-title {
-    width: calc(100% - 12px);
-    margin: 0;
-  }
 
-  .blog-featured .article-info dd {
-    padding: 0;
-  }
+
 
   main .author-container {
     width: 850px;
@@ -1562,13 +1560,7 @@ vertical-align: middle;
     margin-right: 80px;
   }
 
-  .blog-featured .feed-post-thumb {
-    width: 220px;
-  }
 
-  .blog-featured .items-row {
-    grid-template-columns: 1fr 1fr !important;
-  }
 
   .player-title {
     width: 51%;
@@ -1576,6 +1568,7 @@ vertical-align: middle;
 
   .blog-featured {
     width: 48%;
+    padding-top:29%;
   }
 }
 
