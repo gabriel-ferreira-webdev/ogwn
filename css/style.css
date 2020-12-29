@@ -1664,3 +1664,7 @@ ul.social-icons li {
   -webkit-mask-size: cover;
   mask-size: cover;
 }
+
+.feed-post a {
+  display: block;
+}
