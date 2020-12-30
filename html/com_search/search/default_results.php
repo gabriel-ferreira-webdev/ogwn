@@ -26,6 +26,7 @@ $img = $defimg;
 			preg_match_all('#\d+#', $result->href, $val);
 			$id = (int)$val[0][0];
 			$article->load($id);
+				echo $article->author;
 			$images	= json_decode($article->get('images'));
 
 			if( !empty($images->image_intro) ) {
