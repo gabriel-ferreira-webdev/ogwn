@@ -14,8 +14,9 @@ use Joomla\String\StringHelper;
 // Get the mime type class.
 $mime = !empty($this->result->mime) ? 'mime-' . $this->result->mime : null;
  // var_dump($this->result);
-   $author= JFactory::getUser($this->result->created_by)->get('username');
-// echo $this->result->catslug;
+   // $author= JFactory::getUser($this->result->created_by)->get('username');
+$catidslug= $this->result->catslug;
+$author=trim(substr($catidslug, strpos($catidslug, ':') + 1));;
 // $author=$this->result->created_by;
  echo "<a href='".$this->baseurl."/".$author."'>".$this->result->author."</a>";
 
