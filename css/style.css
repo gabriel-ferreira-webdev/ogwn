@@ -119,11 +119,11 @@ blockquote::after {
 
 a:link, a:visited {
   text-decoration: none;
-  color: #eee;
+  color:#1E75BC;
 }
 
-#hamitems a:hover, .search-open:hover, #search-button:hover {
-  opacity: 0.75;
+a:hover,#hamitems a:hover, .search-open:hover, #search-button:hover {
+  text-decoration: underline;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -143,7 +143,6 @@ header .container {
 }
 
 header a:link, header a:visited {
-  color: White;
   font-family: "sourceSansPro-SemiBold";
   font-size: 1.3rem;
 }
