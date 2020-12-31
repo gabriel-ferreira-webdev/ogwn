@@ -119,9 +119,11 @@ blockquote::after {
 
 a:link, a:visited {
   text-decoration: none;
-  color:#1E75BC;
+  color:white;
 }
-
+.blog a:link, .blog a:visited, .item-page a:link, .item-page a:visited, .feed-posts a:link, .feed-posts a:visited{
+    color:#1E75BC;
+}
 a:hover,#hamitems a:hover, .search-open:hover, #search-button:hover {
   text-decoration: underline;
 }
@@ -295,18 +297,14 @@ header a:link, header a:visited {
 /*	3. Mobile Menu
 /* -------------------------------------------------------------------------- */
 @media (max-width:1023px) {
-  .container, .reading-container, .reading-container-shadow, .reading-container-light, .item-page {
+ .item-page {
+   width: 100%;
+   margin: 0 auto;
     font-size: 1rem;
     font-family: "sourceSansPro";
     font-weight: 300;
   }
 
-  .reading-container, .reading-container-shadow, .reading-container-light, .item-page {
-    width: 100%;
-    margin: 0 auto;
-    font-family: "sourceSansPro";
-    font-weight: 300;
-  }
 
   .fade {
     display: inline-block;
@@ -492,7 +490,21 @@ header a:link, header a:visited {
 .section-header, .feed-container h2, .item-page .page-header {
   text-align: center;
 }
-
+.item-page{    font-size: 1rem;
+    margin: 0 auto;
+    width:calc(100% - 4rem);
+    padding: 2rem 2rem;
+    -webkit-box-shadow: 2px 2px 6px 1px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 2px 2px 6px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 6px 1px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(71, 71, 71, 0.5);
+    border-bottom: rgb(29, 29, 29);
+    border-right: rgb(29, 29, 29);
+    border-radius: 1rem;
+    background-color: #15191c;
+    font-family: "sourceSansPro";
+    font-weight: 300;
+  }
 .item-page .page-header h2 {
   text-transform: uppercase;
   font-weight: bold;
@@ -1241,14 +1253,14 @@ overflow-y:scroll;
     color: #eee;
   }
 
-  main .reading-container, .item-page {
+.item-page {
     width: 850px;
     font-size: 1rem;
     margin: 1rem auto;
     padding: 0.5rem 2rem;
   }
 
-  main .reading-container-shadow, .item-page {
+.item-page {
     width: 80%;
     font-size: 1rem;
     margin: 0 auto;
@@ -1265,17 +1277,6 @@ overflow-y:scroll;
     font-weight: 300;
   }
 
-  main .reading-container-light {
-    width: 850px;
-    font-size: 1rem;
-    margin: 1rem auto;
-    padding: 0.5rem 2rem;
-    -webkit-box-shadow: 0px 0px 6px 2px #ccc;
-    -moz-box-shadow: 0px 0px 6px 2px #ccc;
-    box-shadow: 0px 0px 6px 2px #ccc;
-    border: 1px solid #000;
-    border-radius: 0.28571429rem;
-  }
 }
 
 @media (min-width:1024px) {

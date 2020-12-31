@@ -56,6 +56,7 @@ PROPERLY IMPLEMENT HEADER AND FOOTER MODULES AND COMPONENT
 
 
 <jdoc:include type="message"/>
+      <jdoc:include type="modules" name="author-bio" />
   <section class="section section-gray">
     <div class="bg-gradient">
     </div>

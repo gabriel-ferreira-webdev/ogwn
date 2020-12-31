@@ -19,7 +19,9 @@ $catidslug= $this->result->catslug;
 $author=trim(substr($catidslug, strpos($catidslug, ':') + 1));;
 // $author=$this->result->created_by;
  echo "<a href='".$this->baseurl."/".$author."'>".$this->result->author."</a>";
+?>
 
+<?php
 $show_description = $this->params->get('show_description', 1);
 
 if ($show_description)
