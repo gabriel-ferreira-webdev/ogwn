@@ -134,7 +134,7 @@ if ($this->category->alias !== 'all') :
 		$links .= '<div class="email">Email:<br /><a href="mailto:' . $email . '">' . $email . '</a></div>';
 	endif;
 
-	$links .= '</div></div></div>';
+	$links .= '</div></div>';
 	?>
 
 	<div class="author-profile" id="users-profile-custom">
