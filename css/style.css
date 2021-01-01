@@ -1615,10 +1615,30 @@ vertical-align: middle;
   display: none;
 }
 
+.author-profile {
+  margin-bottom: 1.5rem;
+}
+
+.author-page-header-side {
+  width: 100%;
+}
+
+.bio {
+  margin-top: 0.5rem;
+}
+
+.website {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-top: 0.5rem;
+}
+
 ul.social-icons {
   list-style: none;
   float: left;
   padding: 0;
+  margin-top: 0.5rem;
   margin-bottom: 0;
 }
 
