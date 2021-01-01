@@ -1625,15 +1625,15 @@ vertical-align: middle;
 }
 
 .links {
-  margin-top: 0.5rem;
+  margin-top: 1rem;
 }
 
 .links a {
   color: #009de1;
 }
 
-.links .email {
-  margin-top: 0.5rem;
+.email {
+  margin-top: 1rem;
 }
 
 ul.social-icons {

@@ -32,7 +32,7 @@ $beforeDisplayContent = trim(implode("\n", $results));
 $results = $dispatcher->trigger('onContentAfterDisplay', array($this->category->extension . '.categories', &$this->category, &$this->params, 0));
 $afterDisplayContent = trim(implode("\n", $results));
 
-if ($this->category->alias !== 'all-ogwn-content') :
+if ($this->category->alias !== 'all') :
 	$db->setQuery(
 		'SELECT DISTINCT(u.id), u.name FROM #__users u, #__user_profiles up, #__categories ca'
 		. ' WHERE ca.title = u.name AND u.id = up.user_id AND ca.alias = ' . $db->quote($this->category->alias)
@@ -114,7 +114,11 @@ if ($this->category->alias !== 'all-ogwn-content') :
 	endforeach;
 
 	$profileLinks .= '</ul>';
-	$links = '<div class="flex-row-right"><div class="links"><div class="websites">Websites:<br />';
+	$links = '<div><div class="links">';
+
+	if (array_key_exists('url', $site1) || array_key_exists('url', $site2) || array_key_exists('url', $site3)) :
+		$links .= 'Websites:<br />';
+	endif;
 
 	if (array_key_exists('url', $site1)) :
 		$links .= '<div><a href="' . $site1->url . '">' . $site1->title . '</a></div>';
@@ -126,13 +130,11 @@ if ($this->category->alias !== 'all-ogwn-content') :
 		$links .= '<div><a href="' . $site3->url . '">' . $site3->title . '</a></div>';
 	endif;
 
-	$links .= '</div>';
-
 	if ($email) :
 		$links .= '<div class="email">Email:<br /><a href="mailto:' . $email . '">' . $email . '</a></div>';
 	endif;
 
-	$links .= '</div></div>';
+	$links .= '</div></div></div>';
 	?>
 
 	<div class="author-profile" id="users-profile-custom">
