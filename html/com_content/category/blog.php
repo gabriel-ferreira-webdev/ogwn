@@ -32,92 +32,122 @@ $beforeDisplayContent = trim(implode("\n", $results));
 $results = $dispatcher->trigger('onContentAfterDisplay', array($this->category->extension . '.categories', &$this->category, &$this->params, 0));
 $afterDisplayContent = trim(implode("\n", $results));
 
-$db->setQuery(
-	'SELECT DISTINCT(u.id), u.name FROM #__users u, #__user_profiles up, #__categories ca'
-	. ' WHERE ca.title = u.name AND u.id = up.user_id AND ca.alias = ' . $db->quote($this->category->alias)
-);
+if ($this->category->alias !== 'all-ogwn-content') :
+	$db->setQuery(
+		'SELECT DISTINCT(u.id), u.name FROM #__users u, #__user_profiles up, #__categories ca'
+		. ' WHERE ca.title = u.name AND u.id = up.user_id AND ca.alias = ' . $db->quote($this->category->alias)
+	);
 
-$result = $db->loadObjectList();
-$userId = $result[0]->id;
-$name = $result[0]->name;
+	$result = $db->loadObjectList();
+	$userId = $result[0]->id;
+	$name = $result[0]->name;
 
-/*$db->setQuery(
-	'SELECT profile_key, profile_value FROM #__users u, #__user_profiles up, #__categories ca'
-	. ' WHERE ca.title = u.name AND u.id = up.user_id AND ca.alias = ' . $db->quote($this->category->alias) . ' ORDER BY up.ordering ASC'
-);
+	/*$db->setQuery(
+		'SELECT profile_key, profile_value FROM #__users u, #__user_profiles up, #__categories ca'
+		. ' WHERE ca.title = u.name AND u.id = up.user_id AND ca.alias = ' . $db->quote($this->category->alias) . ' ORDER BY up.ordering ASC'
+	);
 
-$result = $db->loadObjectList();*/
+	$result = $db->loadObjectList();*/
 
-$profileLeft = '';
-$miscProfileInfo = '';
-$profileLinks = '<ul class="social-icons">';
-$website = '';
+	$profileLeft = '';
+	$bio = '';
+	$email = '';
+	$profileLinks = '<ul class="social-icons">';
+	// $website = '<div class="websites">';
+	// $sites = [];
+	$site1 = new \stdClass();
+	$site2 = new \stdClass();
+	$site3 = new \stdClass();
 
-/*JLoader::register('FieldsHelper', JPATH_ADMINISTRATOR . '/components/com_fields/helpers/fields.php');
-$customFields = FieldsHelper::getFields('com_users.user', JFactory::getUser($userId), true);*/
+	/*JLoader::register('FieldsHelper', JPATH_ADMINISTRATOR . '/components/com_fields/helpers/fields.php');
+	$customFields = FieldsHelper::getFields('com_users.user', JFactory::getUser($userId), true);*/
 
-$userProfile = JUserHelper::getProfile($userId);
+	$userProfile = JUserHelper::getProfile($userId);
 
-$res;
-$j = 0;
-foreach ($userProfile->profile as $k => $v):
-	$res[$j] = ['name' => $k, 'value' => $v];
-	$j++;
-endforeach;
+	/*$fieldsArray;
+	$j = 0;
+	foreach ($userProfile->profile as $k => $v):
+		$fieldsArray[$j] = ['name' => $k, 'value' => $v];
+		$j++;
+	endforeach;*/
 
-/*echo "<pre>";
-// print_r($this->item->user_id);
-print_r($res);
-// print_r($fields);
-echo "</pre>";*/
+	/*echo "<pre>";
+	print_r($result);
+	echo "</pre>";*/
 
-foreach ($res as $arr) :
-	$text = htmlspecialchars($arr['value'], ENT_COMPAT, 'UTF-8');
+	foreach ($userProfile->profile as $k => $v):
+	//foreach ($fieldsArray as $fieldArray) :
+		$text = htmlspecialchars($v, ENT_COMPAT, 'UTF-8');
 
-	if ($text !== '') :
-		$varName = $arr['name'];
-
-		if (strpos($text, 'http') !== false) :
-			$link = '';
-			$v_social = strpos($varName, 'social-');
-
-			if ($v_social !== false) :
-				$link = '<span class="social-icon ' . $varName . '"></span>';
-			elseif ($varName === 'website') :
-				$website = '<div class="' . $varName . '"><a href="' . $text . '">' . $text . '</a></div>';
-				continue;
-			else :
-				$link = JStringPunycode::urlToUTF8($text);
+		if ($text !== '') :
+			if ($k === 'bio') :
+				$bio = $text;
+			elseif ($k === 'email') :
+			 $email = $text;
+			elseif ($k === 'website1-title') :
+				$site1->title = $text;
+			elseif ($k === 'website1-url') :
+				$site1->url = $text;
+			elseif ($k === 'website2-title') :
+				$site2->title = $text;
+			elseif ($k === 'website2-url') :
+				$site2->url = $text;
+			elseif ($k === 'website3-title') :
+				$site3->title = $text;
+			elseif ($k === 'website3-url') :
+				$site3->url = $text;
+			elseif (strpos($k, 'social-') !== false) :
+				$profileLinks .= '<li><a href="' . $text . '"><span class="social-icon ' . $k . '"></span></a></li>';
+				/*else :
+					$link = JStringPunycode::urlToUTF8($text);*/
+			elseif (strpos($k, 'avatar') !== false) :
+				$profileLeft = '<div class="author-page-header-profile ' . $k . '">
+					<img class="avatar avatar-300 photo" src="' . $text . '" />
+					<nav class="author-donate">
+						<a href="donate">DONATE TO<br>' . $name . '</a>
+					</nav>
+				</div>';
+			/*else :
+				$miscProfileInfo .= '<div class="' . $k . '">' . $text . '</div>';*/
 			endif;
-
-			$profileLinks .= '<li><a href="' . $text . '">' . $link . '</a></li>';
-		elseif (strpos($varName, 'avatar') !== false) :
-			$profileLeft = '<div class="author-page-header-profile ' . $varName . '">
-				<img class="avatar avatar-300 photo" src="' . $text . '" />
-				<nav class="author-donate">
-					<a href="donate">DONATE TO<br>' . $name . '</a>
-				</nav>
-			</div>';
-		else :
-			$miscProfileInfo .= '<div class="' . $varName . '">' . $text . '</div>';
 		endif;
-	endif;
-endforeach;
+	endforeach;
 
-$profileLinks .= '</ul>';
-?>
-<div class="author-profile" id="users-profile-custom">
-	<div class="author-container">
-		<?php echo $profileLeft ?>
-		<div class="author-page-header-side">
-			<h2 class="author-name"><?php echo $this->category->title ?></h2>
-			<?php echo $miscProfileInfo ?>
-			<?php echo $website ?>
-			<?php echo $profileLinks ?>
-			<div class="clr"></div>
+	$profileLinks .= '</ul>';
+	$links = '<div class="flex-row-right"><div class="links"><div class="websites">Websites:<br />';
+
+	if (array_key_exists('url', $site1)) :
+		$links .= '<div><a href="' . $site1->url . '">' . $site1->title . '</a></div>';
+	endif;
+	if (array_key_exists('url', $site2)) :
+		$links .= '<div><a href="' . $site2->url . '">' . $site2->title . '</a></div>';
+	endif;
+	if (array_key_exists('url', $site3)) :
+		$links .= '<div><a href="' . $site3->url . '">' . $site3->title . '</a></div>';
+	endif;
+
+	$links .= '</div>';
+
+	if ($email) :
+		$links .= '<div class="email">Email:<br /><a href="mailto:' . $email . '">' . $email . '</a></div>';
+	endif;
+
+	$links .= '</div></div>';
+	?>
+
+	<div class="author-profile" id="users-profile-custom">
+		<div class="author-container">
+			<?php echo $profileLeft ?>
+			<div class="author-page-header-side">
+				<h2 class="author-name"><?php echo $this->category->title ?></h2>
+				<?php echo '<div class="bio">' . $bio . '</div>' ?>
+				<?php echo $links ?>
+				<?php echo $profileLinks ?>
+			</div>
 		</div>
 	</div>
-</div>
+
+<?php endif; ?>
 
 <div class="blog<?php echo $this->pageclass_sfx; ?>" itemscope itemtype="https://schema.org/Blog">
 	<?php if ($this->params->get('show_page_heading')) : ?>

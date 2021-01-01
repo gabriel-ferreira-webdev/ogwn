@@ -300,7 +300,7 @@ header a:link, header a:visited {
  .item-page {
    width: 100%;
    margin: 0 auto;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-family: "sourceSansPro";
     font-weight: 300;
   }
@@ -490,9 +490,10 @@ header a:link, header a:visited {
 .section-header, .feed-container h2, .item-page .page-header {
   text-align: center;
 }
-.item-page{    font-size: 1rem;
+.item-page{
+  font-size: 1.2rem;
     margin: 0 auto;
-    width:calc(100% - 4rem);
+    width: 850px;
     padding: 2rem 2rem;
     -webkit-box-shadow: 2px 2px 6px 1px rgba(0, 0, 0, 0.5);
     -moz-box-shadow: 2px 2px 6px 1px rgba(0, 0, 0, 0.5);
@@ -1228,13 +1229,8 @@ overflow-y:scroll;
   width:100%;
 }
 
-
-
-
-
-
   main .author-container {
-    width: 850px;
+    width: calc(100% - 2rem);
     font-size: 1.2rem;
     margin: 0 auto;
     padding: 0;
@@ -1255,14 +1251,7 @@ overflow-y:scroll;
 
 .item-page {
     width: 850px;
-    font-size: 1rem;
-    margin: 1rem auto;
-    padding: 0.5rem 2rem;
-  }
-
-.item-page {
-    width: 80%;
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin: 0 auto;
     padding: 2rem 2rem;
     -webkit-box-shadow: 2px 2px 6px 1px rgba(0, 0, 0, 0.5);
@@ -1514,6 +1503,12 @@ vertical-align: middle;
 
 @media (min-width:1500px) {
 
+  .item-page {
+    font-size: 1.2rem;
+    margin: 0 auto;
+    width: calc(100% - 4rem);
+  }
+
   /* FRONT PAGE DESKTOP */
   /* FRONT PAGE PLAYER AND FEATURED VIDEOS DESKTOP */
   /* .live-player-container {
@@ -1610,11 +1605,7 @@ vertical-align: middle;
   }
 }
 
-/* Hack, can't remove <dl> from core, just hide it in page*/
-.fields-container.contact-fields.dl-horizontal {
-  display: none;
-}
-
+/* Kris new styles */
 .author-profile {
   margin-bottom: 1.5rem;
 }
@@ -1627,10 +1618,21 @@ vertical-align: middle;
   margin-top: 0.5rem;
 }
 
-.website {
+.flex-row-left {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: flex-start;
+}
+
+.links {
+  margin-top: 0.5rem;
+}
+
+.links a {
+  color: #009de1;
+}
+
+.links .email {
   margin-top: 0.5rem;
 }
 
@@ -1707,8 +1709,4 @@ ul.social-icons li {
   mask: url(../img/icons/social-hive.svg)  0 0/24px 24px;
   -webkit-mask-size: cover;
   mask-size: cover;
-}
-
-.feed-post > a {
-  display: block;
 }
