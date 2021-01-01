@@ -502,7 +502,7 @@ header a:link, header a:visited {
     border-bottom: rgb(29, 29, 29);
     border-right: rgb(29, 29, 29);
     border-radius: 1rem;
-    background-color: #15191c;
+    background-color: #111c26;
     font-family: "sourceSansPro";
     font-weight: 300;
   }
@@ -1261,7 +1261,7 @@ overflow-y:scroll;
     border-bottom: rgb(29, 29, 29);
     border-right: rgb(29, 29, 29);
     border-radius: 1rem;
-    background-color: #15191c;
+    background-color: #111c26;
     font-family: "sourceSansPro";
     font-weight: 300;
   }
@@ -1606,6 +1606,10 @@ vertical-align: middle;
 }
 
 /* Kris new styles */
+.item-page {
+  background-color: #111c26;
+}
+
 .author-profile {
   margin-bottom: 1.5rem;
 }
