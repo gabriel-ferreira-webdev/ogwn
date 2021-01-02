@@ -1714,3 +1714,45 @@ ul.social-icons li {
   -webkit-mask-size: cover;
   mask-size: cover;
 }
+
+.social-vimeo {
+  -webkit-mask: url(../img/icons/social-vimeo.svg)  0 0/24px 24px;
+  mask: url(../img/icons/social-vimeo.svg)  0 0/24px 24px;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+}
+
+.social-minds {
+  -webkit-mask: url(../img/icons/social-minds.svg)  0 0/24px 24px;
+  mask: url(../img/icons/social-minds.svg)  0 0/24px 24px;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+}
+
+.social-flote {
+  -webkit-mask: url(../img/icons/social-flote.svg)  0 0/24px 24px;
+  mask: url(../img/icons/social-flote.svg)  0 0/24px 24px;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+}
+
+.social-parler {
+  -webkit-mask: url(../img/icons/social-parler.svg)  0 0/24px 24px;
+  mask: url(../img/icons/social-parler.svg)  0 0/24px 24px;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+}
+
+.social-gab {
+  -webkit-mask: url(../img/icons/social-gab.svg)  0 0/24px 24px;
+  mask: url(../img/icons/social-gab.svg)  0 0/24px 24px;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+}
+
+.social-patreon {
+  -webkit-mask: url(../img/icons/social-patreon.svg)  0 0/24px 24px;
+  mask: url(../img/icons/social-patreon.svg)  0 0/24px 24px;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+}
