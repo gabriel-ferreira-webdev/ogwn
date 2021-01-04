@@ -297,13 +297,6 @@ header a:link, header a:visited {
 /*	3. Mobile Menu
 /* -------------------------------------------------------------------------- */
 @media (max-width:1023px) {
- .item-page {
-   width: 100%;
-   margin: 0 auto;
-    font-size: 1.2rem;
-    font-family: "sourceSansPro";
-    font-weight: 300;
-  }
 
 
   .fade {
@@ -493,7 +486,7 @@ header a:link, header a:visited {
 .item-page{
   font-size: 1.2rem;
     margin: 0 auto;
-    width: 850px;
+    max-width: 850px;
     padding: 2rem 2rem;
     -webkit-box-shadow: 2px 2px 6px 1px rgba(0, 0, 0, 0.5);
     -moz-box-shadow: 2px 2px 6px 1px rgba(0, 0, 0, 0.5);
