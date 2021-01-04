@@ -299,6 +299,7 @@ header a:link, header a:visited {
 @media (max-width:1023px) {
 
 
+
   .fade {
     display: inline-block;
     position: fixed;
@@ -499,6 +500,7 @@ header a:link, header a:visited {
     font-family: "sourceSansPro";
     font-weight: 300;
   }
+
 .item-page .page-header h2 {
   text-transform: uppercase;
   font-weight: bold;
@@ -1245,7 +1247,7 @@ overflow-y:scroll;
   }
 
 .item-page {
-    width: 850px;
+    max-width: 850px;
     font-size: 1.2rem;
     margin: 0 auto;
     padding: 2rem 2rem;
@@ -1501,6 +1503,7 @@ vertical-align: middle;
   .item-page {
     font-size: 1.2rem;
     margin: 0 auto;
+    max-width:none;
     width: calc(100% - 4rem);
   }
 
