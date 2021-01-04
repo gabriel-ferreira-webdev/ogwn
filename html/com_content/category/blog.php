@@ -32,10 +32,12 @@ $beforeDisplayContent = trim(implode("\n", $results));
 $results = $dispatcher->trigger('onContentAfterDisplay', array($this->category->extension . '.categories', &$this->category, &$this->params, 0));
 $afterDisplayContent = trim(implode("\n", $results));
 
-if ($this->category->alias !== 'all') :
+$catAlias = $this->category->alias;
+
+if ($catAlias !== 'all') :
 	$db->setQuery(
 		'SELECT DISTINCT(u.id), u.name FROM #__users u, #__user_profiles up, #__categories ca'
-		. ' WHERE ca.title = u.name AND u.id = up.user_id AND ca.alias = ' . $db->quote($this->category->alias)
+		. ' WHERE ca.title = u.name AND u.id = up.user_id AND ca.alias = ' . $db->quote($catAlias)
 	);
 
 	$result = $db->loadObjectList();
@@ -104,7 +106,7 @@ if ($this->category->alias !== 'all') :
 				$profileLeft = '<div class="author-page-header-profile ' . $k . '">
 					<img class="avatar avatar-300 photo" src="' . $text . '" />
 					<nav class="author-donate">
-						<a href="donate">DONATE TO<br>' . $name . '</a>
+						<a href="' . $catAlias . '/donate/">DONATE TO<br>' . $name . '</a>
 					</nav>
 				</div>';
 			/*else :
