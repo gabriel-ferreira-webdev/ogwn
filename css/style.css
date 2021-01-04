@@ -122,7 +122,7 @@ a:link, a:visited {
   color:white;
 }
 .blog a:link, .blog a:visited, .item-page a:link, .item-page a:visited, .feed-posts a:link, .feed-posts a:visited{
-    color:#1E75BC;
+    color:#009de1;
 }
 a:hover,#hamitems a:hover, .search-open:hover, #search-button:hover {
   text-decoration: underline;
@@ -691,9 +691,11 @@ main .container {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   margin: 3px 0 0;
+  color: #009de1;
 }
 
 .item .page-header {
