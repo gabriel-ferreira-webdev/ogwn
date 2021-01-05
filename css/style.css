@@ -1104,7 +1104,7 @@ footer .container ul li {
     width: 100%;
   }
 
-  .items-row {
+  .blog {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(275px,1fr));
     grid-gap: 1rem;
