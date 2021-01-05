@@ -484,9 +484,7 @@ header a:link, header a:visited {
   font-weight: 400;
 }
 
-.section-header, .feed-container h2, .item-page .page-header {
-  text-align: center;
-}
+
 .item-page{
   font-size: 1.2rem;
     margin: 0 auto;
@@ -507,9 +505,14 @@ header a:link, header a:visited {
 .item-page .page-header h2 {
   text-transform: uppercase;
   font-weight: bold;
-  margin-top: 0;
+  margin: 0 0 12px 0;
   font-size: 1.5rem;
   font-family: "sourceSansPro-SemiBold";
+}
+.item-page .article-info{
+  border-top:1px solid gray;
+  border-bottom:1px solid gray;
+  margin:0;
 }
 
 .section-gray {
@@ -593,7 +596,7 @@ main .container {
   margin: 0 auto;
   overflow: hidden;
 }
-
+.blog .published{display:none;}
 .author-feed-posts.feed-posts {
   margin-top: 1rem;
 }
