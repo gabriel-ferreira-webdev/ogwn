@@ -200,6 +200,9 @@ header a:link, header a:visited {
 .header-searchform input[type=checkbox]:checked~#search-cb-label .search-open {
   background-image: url("../img/icons/close.png")
 }
+.search-open{
+  display:none;
+}
 
 #search-button {
   vertical-align: top;
@@ -1214,13 +1217,12 @@ footer .container ul li {
     position: relative;
     width: 33%;
     float: right;
-    height: 0;
-padding-top: 37%;
+    max-height:500px;
 overflow-y:scroll;
   }
-.blog-featured .items-row{
+/* .blog-featured .items-row{
   position: absolute;top:0;width:100%;
-}
+} */
 
 .blog-featured .feed-post-thumb{
   width:100%;
@@ -1560,8 +1562,8 @@ vertical-align: middle;
   }
 
   .blog-featured {
-    width: 48%;
-    padding-top:29%;
+    max-height:1000px;
+    width:48%;
   }
 }
 
