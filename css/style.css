@@ -508,10 +508,9 @@ header a:link, header a:visited {
   margin: 0 0 12px 0;
   font-size: 1.5rem;
   font-family: "sourceSansPro-SemiBold";
+  text-align: center;
 }
 .item-page .article-info{
-  border-top:1px solid gray;
-  border-bottom:1px solid gray;
   margin:0;
 }
 
@@ -681,8 +680,8 @@ main .container {
   margin: 0 auto;
   max-height: 92px;
 }
-
 .article-info dd {
+  display:inline;
   margin-left: 0;
   padding-bottom: 6px;
 }
@@ -698,7 +697,7 @@ main .container {
   margin: 3px 0 0;
   color: #009de1;
 }
-
+.item-page .article-info{text-align:center;margin-bottom:24px;}
 .item .page-header {
   margin: 0 10px;
 }
@@ -779,7 +778,6 @@ main .container {
   font-weight: 400;
   font-family: arvo, "sourceSansPro";
 }
-
 .mod-list li a {
   display: block;
   text-align: center;
@@ -1078,7 +1076,9 @@ footer .container ul li {
 .iframe-container-width {
   width: 100%;
   max-width: 720px;
-  margin: 0 auto;
+  margin:0;
+  margin-right:auto;
+
 }
 
 .iframe-container {
@@ -1509,7 +1509,7 @@ vertical-align: middle;
     font-size: 1.2rem;
     margin: 0 auto;
     max-width:none;
-    width: calc(100% - 4rem);
+    width: calc(75% - 4rem);
   }
 
   /* FRONT PAGE DESKTOP */
