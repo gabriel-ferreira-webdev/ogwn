@@ -408,6 +408,27 @@ header a:link, header a:visited {
     width: 2rem;
     height: 2rem;
   }
+
+  main .author-container {
+    width: calc(100% - 2rem);
+    font-size: 1.2rem;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #111c26;
+    -webkit-box-shadow: 2px 2px 6px 1px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 2px 2px 6px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 6px 1px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(71, 71, 71, 0.5);
+    border-bottom: 1px solid rgb(29, 29, 29);
+    border-right: 1px solid rgb(29, 29, 29);
+    border-radius: 1rem;
+    padding: 1rem;
+    color: #eee;
+  }
 }
 
 /* -------------------------------------------------------------------------- */
@@ -889,12 +910,16 @@ footer .container ul li {
   text-align: center;
 }
 
+.author-page-header-profile {
+  text-align: center;
+}
+
 .author-page-header-profile .avatar {
   border: 3px solid white;
   /* margin-top: 10px; */
   height: auto;
   border-radius: 50%;
-  width: 100%;
+  width: 285px;
 }
 
 .author-donate a {
@@ -1124,8 +1149,6 @@ footer .container ul li {
     flex-grow: 0;
   }
 
-  @media (min-width:1024px) {}
-
   /*  */
   .feed-post-thumb {
     float: none;
@@ -1158,11 +1181,14 @@ footer .container ul li {
   }
 
   .author-page-header-profile {
-    /* padding-top: 0.5rem; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
   }
 
   .author-page-header-profile .avatar {
-    width: 150px;
+    width: 285px;
   }
 
   .author-page-header-side {
@@ -1195,6 +1221,10 @@ footer .container ul li {
   .author-page-header-social a:first-child {
     margin-left: 0;
   }
+
+  .author-donate {
+    width: 100%;
+  }
 }
 
 @media (min-width:872px) {
@@ -1207,7 +1237,20 @@ footer .container ul li {
   }
 }
 
+
 @media (min-width:1024px) {
+
+  .author-page-header-profile {
+    width: 150px;
+  }
+
+  .author-page-header-profile .avatar {
+    width: 150px;
+  }
+
+  .author-donate {
+    width: 100%;
+  }
 
   /* FRONT PAGE */
   .player-title {
@@ -1267,10 +1310,6 @@ overflow-y:scroll;
     font-family: "sourceSansPro";
     font-weight: 300;
   }
-
-}
-
-@media (min-width:1024px) {
 
   /* HEADER DESKTOP */
   header .container, main .container {
