@@ -410,7 +410,7 @@ header a:link, header a:visited {
   }
 
   main .author-container {
-    width: calc(100% - 2rem);
+    max-width: 850px;
     font-size: 1.2rem;
     margin: 0 auto;
     padding: 0;
@@ -1275,7 +1275,7 @@ overflow-y:scroll;
 }
 
   main .author-container {
-    width: calc(100% - 2rem);
+    width: 850px;
     font-size: 1.2rem;
     margin: 0 auto;
     padding: 0;
@@ -1550,6 +1550,11 @@ vertical-align: middle;
     max-width:none;
     width: calc(75% - 4rem);
   }
+
+  main .author-container {
+    width: calc(75% - 4rem);
+  }
+
 
   /* FRONT PAGE DESKTOP */
   /* FRONT PAGE PLAYER AND FEATURED VIDEOS DESKTOP */

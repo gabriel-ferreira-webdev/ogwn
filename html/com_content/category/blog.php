@@ -44,41 +44,21 @@ if ($catAlias !== 'all') :
 	$userId = $result[0]->id;
 	$name = $result[0]->name;
 
-	/*$db->setQuery(
-		'SELECT profile_key, profile_value FROM #__users u, #__user_profiles up, #__categories ca'
-		. ' WHERE ca.title = u.name AND u.id = up.user_id AND ca.alias = ' . $db->quote($this->category->alias) . ' ORDER BY up.ordering ASC'
-	);
-
-	$result = $db->loadObjectList();*/
-
 	$profileLeft = '';
 	$bio = '';
 	$email = '';
 	$profileLinks = '<ul class="social-icons">';
-	// $website = '<div class="websites">';
-	// $sites = [];
 	$site1 = new \stdClass();
 	$site2 = new \stdClass();
 	$site3 = new \stdClass();
 
-	/*JLoader::register('FieldsHelper', JPATH_ADMINISTRATOR . '/components/com_fields/helpers/fields.php');
-	$customFields = FieldsHelper::getFields('com_users.user', JFactory::getUser($userId), true);*/
-
 	$userProfile = JUserHelper::getProfile($userId);
-
-	/*$fieldsArray;
-	$j = 0;
-	foreach ($userProfile->profile as $k => $v):
-		$fieldsArray[$j] = ['name' => $k, 'value' => $v];
-		$j++;
-	endforeach;*/
 
 	/*echo "<pre>";
 	print_r($result);
 	echo "</pre>";*/
 
 	foreach ($userProfile->profile as $k => $v):
-	//foreach ($fieldsArray as $fieldArray) :
 		$text = htmlspecialchars($v, ENT_COMPAT, 'UTF-8');
 
 		if ($text !== '') :
@@ -99,18 +79,14 @@ if ($catAlias !== 'all') :
 			elseif ($k === 'website3-url') :
 				$site3->url = $text;
 			elseif (strpos($k, 'social-') !== false) :
-				$profileLinks .= '<li><a href="' . $text . '"><span class="social-icon ' . $k . '"></span></a></li>';
-				/*else :
-					$link = JStringPunycode::urlToUTF8($text);*/
+				$profileLinks .= '<li><a target="_blank" href="' . $text . '"><span class="social-icon ' . $k . '"></span></a></li>';
 			elseif (strpos($k, 'avatar') !== false) :
 				$profileLeft = '<div class="author-page-header-profile ' . $k . '">
 					<img class="avatar avatar-300 photo" src="' . $text . '" />
 					<nav class="author-donate">
-						<a href="' . $catAlias . '/donate/">DONATE TO<br>' . $name . '</a>
+						<a target="_blank" href="' . $catAlias . '/donate/">DONATE TO<br>' . $name . '</a>
 					</nav>
 				</div>';
-			/*else :
-				$miscProfileInfo .= '<div class="' . $k . '">' . $text . '</div>';*/
 			endif;
 		endif;
 	endforeach;
@@ -123,17 +99,17 @@ if ($catAlias !== 'all') :
 	endif;
 
 	if (array_key_exists('url', $site1)) :
-		$links .= '<div><a href="' . $site1->url . '">' . $site1->title . '</a></div>';
+		$links .= '<div><a target="_blank" href="' . $site1->url . '">' . $site1->title . '</a></div>';
 	endif;
 	if (array_key_exists('url', $site2)) :
-		$links .= '<div><a href="' . $site2->url . '">' . $site2->title . '</a></div>';
+		$links .= '<div><a target="_blank" href="' . $site2->url . '">' . $site2->title . '</a></div>';
 	endif;
 	if (array_key_exists('url', $site3)) :
-		$links .= '<div><a href="' . $site3->url . '">' . $site3->title . '</a></div>';
+		$links .= '<div><a target="_blank" href="' . $site3->url . '">' . $site3->title . '</a></div>';
 	endif;
 
 	if ($email) :
-		$links .= '<div class="email">Email:<br /><a href="mailto:' . $email . '">' . $email . '</a></div>';
+		$links .= '<div class="email">Email:<br /><a target="_blank" href="mailto:' . $email . '">' . $email . '</a></div>';
 	endif;
 
 	$links .= '</div></div>';
