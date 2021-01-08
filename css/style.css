@@ -753,28 +753,34 @@ main .container {
 }
 
 /* FRONT PAGE CONTENT CREATORS */
-main ul {
+#content-creators-section ul {
   list-style: none;
 }
 
-main ul li {
+#content-creators-section ul li{
   display: inline-block;
   width: 100px;
   margin: 0 26px;
 }
-
-main ul li img, .thumbnail img, .author-bio-img {
+#content-creators-section ul li img{
   display: block;
   width: 100px;
+  height:100px;
   border: 3px solid white;
+  border-radius: 50%;
+  -webkit-box-shadow: 3px 3px 6px 1px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 3px 3px 6px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 3px 3px 6px 1px rgba(0, 0, 0, 0.5);
+  background-size: cover;
+  background-position: center;
+  /* max-width: 80%; */
 }
-
-main ul li img:hover {
+#content-creators-section ul li img:hover {
   transition: .1s;
   box-shadow: 0px 0px 9px white;
 }
 
-main ul li span {
+#content-creators-section ul li span {
   text-align: center;
   display: block;
   width: 100%;
@@ -823,31 +829,7 @@ main .container {
   margin: 24px 0 12px 0;
 }
 
-.mod-list li a img {
-  height: auto;
-  border-radius: 50%;
-  -webkit-box-shadow: 3px 3px 6px 1px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 3px 3px 6px 1px rgba(0, 0, 0, 0.5);
-  box-shadow: 3px 3px 6px 1px rgba(0, 0, 0, 0.5);
-  /* max-width: 80%; */
-}
 
-.author-list .user {
-  width: 33.3%;
-  margin-bottom: 50px;
-}
-
-.author-list .user .avatar {
-  width: 10%;
-  margin-right: 3px;
-  width: 80%;
-  height: auto;
-}
-
-.author-list .user .photo {
-  border: 3px solid white;
-  transition: .1s;
-}
 
 /* -------------------------------------------------------------------------- */
 /*	5. Site Footer
@@ -1120,6 +1102,15 @@ footer .container ul li {
   width: 100%;
   height: 100%;
 }
+/* -------------------------------------------------------------------------- */
+/*	9. Back-End
+  /* -------------------------------------------------------------------------- */
+
+.header .container-logo .logo{
+  display:none;
+}
+
+
 
 /* -------------------------------------------------------------------------- */
 /*	9. Media Queries
