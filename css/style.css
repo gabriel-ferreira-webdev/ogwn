@@ -759,13 +759,13 @@ main .container {
 
 #content-creators-section ul li{
   display: inline-block;
-  width: 100px;
-  margin: 0 26px;
+  width: 150px;
+  margin: 24px;
 }
 #content-creators-section ul li img{
   display: block;
-  width: 100px;
-  height:100px;
+  width: 150px;
+  height:150px;
   border: 3px solid white;
   border-radius: 50%;
   -webkit-box-shadow: 3px 3px 6px 1px rgba(0, 0, 0, 0.5);
@@ -1160,7 +1160,7 @@ footer .container ul li {
   /* FRONT PAGE PLAYER AND FEATURED VIDEOS */
   .live-title, #header-live {
     width: auto;
-    margin: 0;
+    margin: 18px 0 0 0;
   }
 
   /* AUTHOR PAGE */
@@ -1687,6 +1687,7 @@ ul.social-icons {
 }
 
 ul.social-icons li {
+  display:inline-block;
   width: inherit;
   padding: 0;
   margin: 0 0.5rem;
