@@ -753,19 +753,25 @@ main .container {
 }
 
 /* FRONT PAGE CONTENT CREATORS */
-#content-creators-section ul {
+.menu-cc {
   list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  float: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 24px 0 12px 0;
 }
 
-#content-creators-section ul li{
+.menu-cc li{
   display: inline-block;
-  width: 150px;
-  margin: 24px;
+  width: 200px;
+  margin: 12px 24px ;
 }
-#content-creators-section ul li img{
+.menu-cc li img{
   display: block;
-  width: 150px;
-  height:150px;
+  width:100%;
   border: 3px solid white;
   border-radius: 50%;
   -webkit-box-shadow: 3px 3px 6px 1px rgba(0, 0, 0, 0.5);
@@ -775,12 +781,12 @@ main .container {
   background-position: center;
   /* max-width: 80%; */
 }
-#content-creators-section ul li img:hover {
+.menu-cc li img:hover {
   transition: .1s;
   box-shadow: 0px 0px 9px white;
 }
 
-#content-creators-section ul li span {
+.menu-cc li span {
   text-align: center;
   display: block;
   width: 100%;
@@ -819,15 +825,6 @@ main .container {
   margin: 12px 0 24px 0;
 }
 
-#content-creators-section .mod-list {
-  padding: 0;
-  margin: 0 auto;
-  float: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 24px 0 12px 0;
-}
 
 
 
