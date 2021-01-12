@@ -907,7 +907,7 @@ footer .container ul li {
   padding: 1em;
   font-weight: bold;
   background: green;
-  border-radius: 6px;
+  border-radius: 1rem;
   width: 100%;
   padding: 12px 0;
   margin: 7px 0 0;
@@ -1789,6 +1789,20 @@ ul.social-icons li {
 .social-patreon {
   -webkit-mask: url(../img/icons/social-patreon.svg)  0 0/24px 24px;
   mask: url(../img/icons/social-patreon.svg)  0 0/24px 24px;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+}
+
+.social-mewe {
+  -webkit-mask: url(../img/icons/social-mewe.svg)  0 0/24px 24px;
+  mask: url(../img/icons/social-mewe.svg)  0 0/24px 24px;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+}
+
+.social-rumble {
+  -webkit-mask: url(../img/icons/social-rumble.svg)  0 0/24px 24px;
+  mask: url(../img/icons/social-rumble.svg)  0 0/24px 24px;
   -webkit-mask-size: cover;
   mask-size: cover;
 }
