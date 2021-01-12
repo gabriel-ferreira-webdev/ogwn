@@ -1795,3 +1795,17 @@ ul.social-icons li {
   -webkit-mask-size: cover;
   mask-size: cover;
 }
+
+.social-mewe {
+  -webkit-mask: url(../img/icons/social-mewe.svg)  0 0/24px 24px;
+  mask: url(../img/icons/social-mewe.svg)  0 0/24px 24px;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+}
+
+.social-rumble {
+  -webkit-mask: url(../img/icons/social-rumble.svg)  0 0/24px 24px;
+  mask: url(../img/icons/social-rumble.svg)  0 0/24px 24px;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+}
