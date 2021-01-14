@@ -298,7 +298,7 @@ header a:link, header a:visited {
 /* -------------------------------------------------------------------------- */
 /*	3. Mobile Menu
 /* -------------------------------------------------------------------------- */
-@media (max-width:1023px) {
+@media (max-width:1069px) {
 
 
 
@@ -1231,7 +1231,7 @@ div[itemprop="articleBody"] img {
 }
 
 
-@media (min-width:1024px) {
+@media (min-width:1070px) {
 
   .author-page-header-profile {
     width: 150px;
