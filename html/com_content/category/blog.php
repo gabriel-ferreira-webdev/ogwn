@@ -131,9 +131,11 @@ if ($parentId !== 'root') :
 
 <?php endif; ?>
 
-<div class="page-header">
-	<h2 itemprop="headline"> <?php echo $this->escape($title); ?> </h2>
-</div>
+<?php if ($catAlias === 'featured' || $catAlias === 'all'): ?>
+	<div class="page-header">
+		<h2 itemprop="headline"> <?php echo $this->escape($title); ?> </h2>
+	</div>
+<?php endif; ?>
 
 <div class="blog<?php echo $this->pageclass_sfx; ?>" itemscope itemtype="https://schema.org/Blog">
 	<?php if ($this->params->get('show_page_heading')) : ?>
