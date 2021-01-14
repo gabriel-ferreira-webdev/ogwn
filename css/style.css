@@ -1066,9 +1066,11 @@ footer .container ul li {
   font-family: "Lato", "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   letter-spacing: 0.6px;
 }
-.item-page img{
-  /*max-width:100%;
-  height:auto;*/
+
+.schedule img {
+  max-width:100%;
+  height:auto;
+  text-align: center;
 }
 
 /* EMBEDS */
