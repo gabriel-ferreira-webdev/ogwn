@@ -1637,6 +1637,12 @@ vertical-align: middle;
 }
 
 /* Kris new styles */
+
+.container .page-header h2 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
 .item-page {
   background-color: #111c26;
 }

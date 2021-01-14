@@ -33,8 +33,10 @@ $results = $dispatcher->trigger('onContentAfterDisplay', array($this->category->
 $afterDisplayContent = trim(implode("\n", $results));
 
 $catAlias = $this->category->alias;
+$parentId = $this->category->parent_id;
+$title = $this->category->title;
 
-if ($catAlias !== 'all') :
+if ($parentId !== 'root') :
 	$db->setQuery(
 		'SELECT DISTINCT(u.id), u.name FROM #__users u, #__user_profiles up, #__categories ca'
 		. ' WHERE ca.title = u.name AND u.id = up.user_id AND ca.alias = ' . $db->quote($catAlias)
@@ -84,7 +86,7 @@ if ($catAlias !== 'all') :
 				$profileLeft = '<div class="author-page-header-profile ' . $k . '">
 					<img class="avatar avatar-300 photo" src="' . $text . '" />
 					<nav class="author-donate">
-						<a href="' . $catAlias . '/donate/">DONATE TO<br>' . $name . '</a>
+						<a target="_blank" href="' . $catAlias . '/donate/">DONATE TO<br>' . $name . '</a>
 					</nav>
 				</div>';
 			endif;
@@ -128,6 +130,10 @@ if ($catAlias !== 'all') :
 	</div>
 
 <?php endif; ?>
+
+<div class="page-header">
+	<h2 itemprop="headline"> <?php echo $this->escape($title); ?> </h2>
+</div>
 
 <div class="blog<?php echo $this->pageclass_sfx; ?>" itemscope itemtype="https://schema.org/Blog">
 	<?php if ($this->params->get('show_page_heading')) : ?>
