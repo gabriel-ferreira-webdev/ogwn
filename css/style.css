@@ -801,7 +801,7 @@ main .container {
 }
 
 main .container {
-  margin: 2rem auto;
+  margin: 1.5rem auto;
   width: calc(100% - 1rem);
 }
 
