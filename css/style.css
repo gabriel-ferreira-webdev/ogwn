@@ -1073,6 +1073,12 @@ footer .container ul li {
   text-align: center;
 }
 
+div[itemprop="articleBody"] img {
+  max-width:100%;
+  height:auto;
+  text-align: center;
+}
+
 /* EMBEDS */
 /* YOUTUBE */
 /* IFRAMES */
