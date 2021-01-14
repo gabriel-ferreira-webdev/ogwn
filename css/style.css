@@ -772,8 +772,8 @@ main .container {
   object-position: center;
   object-fit: cover;
   border-radius: 50%;
-  width: 150px;
-  height: 150px;
+  width: 180px;
+  height: 180px;
   /* max-width: 80%; */
 }
 .menu-cc li img:hover {
@@ -1067,8 +1067,8 @@ footer .container ul li {
   letter-spacing: 0.6px;
 }
 .item-page img{
-  max-width:100%;
-  height:auto;
+  /*max-width:100%;
+  height:auto;*/
 }
 
 /* EMBEDS */
