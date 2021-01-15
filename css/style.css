@@ -1646,6 +1646,11 @@ vertical-align: middle;
 
 /* Kris new styles */
 
+.slogan {
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
 .container .page-header h2 {
   text-align: center;
   text-transform: uppercase;
