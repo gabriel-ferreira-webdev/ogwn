@@ -119,6 +119,7 @@ blockquote::after {
 a:link, a:visited {
   text-decoration: none;
   color:white;
+  word-break: break-all;
 }
 .blog a:link, .blog a:visited, .item-page a:link, .item-page a:visited, .feed-posts a:link, .feed-posts a:visited, .blog-featured a:link, .blog-featured a:visited{
     color:#009de1;
@@ -1252,7 +1253,7 @@ div[itemprop="articleBody"] img {
     vertical-align: top;
   }
 
-  .blog-featured {
+  .blog-featured-fp {
     position: relative;
     width: 33%;
     float: right;
@@ -1600,7 +1601,7 @@ vertical-align: middle;
     width: 51%;
   }
 
-  .blog-featured {
+  .blog-featured-fp {
     max-height:1000px;
     width:48%;
   }
