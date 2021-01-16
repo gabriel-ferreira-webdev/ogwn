@@ -768,13 +768,13 @@ main .container {
 
 .item-page .category-name {
   align-self: flex-start;
-  margin-left: 1.1rem;
+  margin-left: 1rem;
   margin-bottom: -0.2rem;
 }
 
 .item-page .published {
   align-self: flex-start;
-  margin-left: 0;
+  margin-left: 0.3rem;
 }
 
 .item h2 {
@@ -789,7 +789,7 @@ main .container {
 }
 
 .item-page .article-info {
-  text-align: center;
+  /*text-align: center;*/
   margin-bottom: 0.5rem;
 }
 
