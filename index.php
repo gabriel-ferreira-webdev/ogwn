@@ -113,7 +113,10 @@ else {
 
 
   </div>
-  <div class="slogan">ONE GREAT WORK NETWORK – Ending Slavery, One Mind At A Time.</div>
+  <div class="slogan">
+    ONE GREAT WORK NETWORK<br />
+    Ending Slavery, One Mind At A Time.
+  </div>
 </footer>
 
 </div>
