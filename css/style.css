@@ -1289,7 +1289,7 @@ div[itemprop="articleBody"] img {
     max-height:500px;
 overflow-y:scroll;
 }
-.blog-featured-fp div:nth-child(13){
+.blog-featured-fp div:nth-child(n+12){
   display:none;
 }
 /* .blog-featured .items-row{
@@ -1597,7 +1597,6 @@ vertical-align: middle;
   .blog-featured-fp {
     max-height:825px;
     width:48%;
-    overflow-y: hidden;
   }
 }
 @media (min-width:2558px) {
@@ -1605,6 +1604,9 @@ vertical-align: middle;
 .item-page{
   max-width:1440px;
 
+}
+.blog-featured-fp {
+  overflow-y: hidden;
 }
 }
 @media (min-width:3500px) {
