@@ -1768,8 +1768,7 @@ div[itemprop="articleBody"] img {
 .blog .page-header, .blog-featured .page-header, .blog-featured .item-title {
   min-height: 3rem;
   max-height: 3rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  font-family: "sourceSansPro";
 }
 
 .blog-featured .item-title {
