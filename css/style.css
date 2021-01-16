@@ -1289,7 +1289,7 @@ div[itemprop="articleBody"] img {
     max-height:500px;
 overflow-y:scroll;
 }
-.blog-featured-fp div:nth-child(n+12){
+.blog-featured-fp div:nth-child(n+13){
   display:none;
 }
 /* .blog-featured .items-row{
