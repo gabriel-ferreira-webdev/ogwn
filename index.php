@@ -76,7 +76,9 @@ else {
   // you are out!
 } ?>
       <jdoc:include type="modules" name="featured"/>
-
+      <span class="titles">
+      <jdoc:include type="modules" name="titles"/>
+      </span>
       <jdoc:include type="component"/>
 
 

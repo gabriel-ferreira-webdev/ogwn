@@ -63,7 +63,7 @@ $assocParam = (JLanguageAssociations::isEnabled() && $params->get('show_associat
 <?php if ($params->get('show_title')) : ?>
 	<h2 class="item-title" itemprop="headline">
 	<?php if ($params->get('link_titles') && $params->get('access-view')) : ?>
-		<a href="<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($this->item->slug, $this->item->catid, $this->item->language)); ?>" itemprop="url">
+		<a title="<?php echo $this->escape($this->item->title); ?>" href="<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($this->item->slug, $this->item->catid, $this->item->language)); ?>" itemprop="url">
 			<?php echo $this->escape($this->item->title); ?>
 		</a>
 	<?php else : ?>

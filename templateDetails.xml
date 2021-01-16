@@ -25,6 +25,7 @@
   <position>live</position>
   <position>live-title</position>
   <position>featured</position>
+  <position>titles</position>
   <position>content-creators</position>
   <position>author-bio</position>
 </positions>
