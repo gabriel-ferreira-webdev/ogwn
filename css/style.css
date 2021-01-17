@@ -987,7 +987,7 @@ footer .container ul li {
   object-fit: cover;
   border-radius: 50%;
   width: 150px;
-  height: auto;
+  height: 150px;
 }
 
 .author-donate a {
@@ -1182,6 +1182,9 @@ div[itemprop="articleBody"] img {
   text-align: center;
 }
 
+div[itemprop="articleBody"] .menu-cc img{
+  height:180px;
+}
 /* EMBEDS */
 /* YOUTUBE */
 /* IFRAMES */
@@ -1290,7 +1293,7 @@ div[itemprop="articleBody"] img {
 
   .author-page-header-profile .avatar {
     width: 285px;
-
+    height: 285px;
   }
 
   .author-page-header-side {
@@ -1346,6 +1349,7 @@ div[itemprop="articleBody"] img {
 
   .author-page-header-profile .avatar {
     width: 150px;
+    height: 150px;
   }
 
   .author-donate {
@@ -1696,7 +1700,7 @@ div[itemprop="articleBody"] img {
   }
 }
 
-@media (min-width:2558px) {
+@media (min-width:2000px) {
 
   /* ARTICLES */
   .item-page {
