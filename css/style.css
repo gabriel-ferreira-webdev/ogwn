@@ -532,7 +532,7 @@ header a:link, header a:visited {
   margin: 0 0 0.5rem 0;
   /*font-size: 2rem;*/
   font-family: "sourceSansPro-SemiBold";
-  /*text-align: center;*/
+  text-align: center;
 }
 
 .item-page .article-info {
