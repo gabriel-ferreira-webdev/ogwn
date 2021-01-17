@@ -977,6 +977,7 @@ footer .container ul li {
 
 .author-page-header-profile {
   text-align: center;
+
 }
 
 .author-page-header-profile .avatar {
@@ -986,7 +987,7 @@ footer .container ul li {
   object-fit: cover;
   border-radius: 50%;
   width: 150px;
-  height: 150px;
+  height: auto;
 }
 
 .author-donate a {
@@ -1289,7 +1290,7 @@ div[itemprop="articleBody"] img {
 
   .author-page-header-profile .avatar {
     width: 285px;
-    height:285px;
+
   }
 
   .author-page-header-side {
