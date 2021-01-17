@@ -1624,7 +1624,7 @@ div[itemprop="articleBody"] img {
   }
 
   main .author-container {
-    width: calc(75% - 4rem);
+    width: 850px;
   }
 
   /* FRONT PAGE DESKTOP */
@@ -1696,6 +1696,10 @@ div[itemprop="articleBody"] img {
   /* ARTICLES */
   .item-page {
     max-width: 1440px;
+  }
+
+  main .author-container {
+    width: 1440px;
   }
 
   .blog-featured-fp-container {
