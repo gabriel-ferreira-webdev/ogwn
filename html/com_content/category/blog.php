@@ -86,7 +86,7 @@ if ($parentId !== 'root') :
 				$profileLeft = '<div class="author-page-header-profile ' . $k . '">
 					<img class="avatar avatar-300 photo" src="' . $text . '" />
 					<nav class="author-donate">
-						<a target="_blank" href="' . $catAlias . '/donate/">DONATE TO<br>' . $name . '</a>
+						<a href="' . $catAlias . '/donate/">DONATE TO<br>' . $name . '</a>
 					</nav>
 				</div>';
 			endif;
