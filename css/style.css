@@ -540,7 +540,7 @@ header a:link, header a:visited {
 }
 
 .item-page a:link, .item-page a:visited {
-  word-break: break-all;
+  word-break: break-word;
 }
 
 .section-gray {
