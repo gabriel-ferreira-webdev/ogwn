@@ -1712,7 +1712,12 @@ div[itemprop="articleBody"] .menu-cc img{
   }
 
   .blog-featured-fp-container {
-    overflow-y: hidden;
+    padding: 0;
+    max-height: none;
+    overflow-y:auto;
+  }
+  .blog-featured-fp{
+    position: static;
   }
 }
 
