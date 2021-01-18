@@ -29,6 +29,7 @@ JHtml::_('behavior.caption');
 	<div class="page-header">
 		<h1> <?php echo $this->escape($this->params->get('page_heading')); ?> </h1>
 	</div>
+
 	<?php endif;
 	if (!empty($this->item->pagination) && $this->item->pagination && !$this->item->paginationposition && $this->item->paginationrelative)
 	{
@@ -37,6 +38,7 @@ JHtml::_('behavior.caption');
 	?>
 
 	<?php // Todo Not that elegant would be nice to group the params ?>
+
 	<?php $useDefList = ($params->get('show_modify_date') || $params->get('show_publish_date') || $params->get('show_create_date')
 	|| $params->get('show_hits') || $params->get('show_category') || $params->get('show_parent_category') || $params->get('show_author') || $assocParam); ?>
 
@@ -61,6 +63,7 @@ JHtml::_('behavior.caption');
 			<span class="label label-warning"><?php echo JText::_('JEXPIRED'); ?></span>
 		<?php endif; ?>
 	</div>
+		<div class="separator-line separator-line-top"></div>
 	<?php endif; ?>
 	<?php if (!$this->print) : ?>
 		<?php if ($canEdit || $params->get('show_print_icon') || $params->get('show_email_icon')) : ?>
