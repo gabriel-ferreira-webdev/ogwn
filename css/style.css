@@ -522,6 +522,7 @@ header a:link, header a:visited {
   border-radius: 1rem;
   background-color: #111c26;
   font-family: "sourceSansPro";
+  margin-bottom:1.5rem;
 }
 
 .item-page .page-header h2 {
