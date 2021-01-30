@@ -79,8 +79,9 @@ else {
       <span class="titles">
       <jdoc:include type="modules" name="titles"/>
       </span>
-      <jdoc:include type="component"/>
 
+      <jdoc:include type="component"/>
+      <jdoc:include type="modules" name="main"/>
 
       </div>
       <div class="bg-gradient bg-gradient-r">

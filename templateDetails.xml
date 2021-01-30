@@ -27,6 +27,7 @@
   <position>featured</position>
   <position>titles</position>
   <position>content-creators</position>
+  <position>main</position>
   <position>author-bio</position>
 </positions>
 </extension>

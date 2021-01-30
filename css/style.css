@@ -24,6 +24,7 @@ Author: OGWN Team
 /* -------------------------------------------------------------------------- */
 /*	0. CSS Reset
 /* -------------------------------------------------------------------------- */
+.ToolTip{display:none!important;}
 .ogwn-coming-soon {
   position: absolute;
   top: 0;
@@ -510,7 +511,7 @@ header a:link, header a:visited {
 
 .item-page {
   font-size: 1.2rem;
-  margin: 0 auto;
+  margin: 0 auto 1.5rem;
   max-width: 850px;
   padding: 2rem 2rem;
   -webkit-box-shadow: 2px 2px 6px 1px rgba(0, 0, 0, 0.5);
@@ -522,7 +523,6 @@ header a:link, header a:visited {
   border-radius: 1rem;
   background-color: #111c26;
   font-family: "sourceSansPro";
-  margin-bottom:1.5rem;
 }
 
 .item-page .page-header h2 {
@@ -617,15 +617,6 @@ main .container {
   padding: 0;
 }
 
-.feed-posts, .blog-featured {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
-  grid-gap: 1rem;
-  justify-content: center;
-  list-style: none;
-  margin: 0 auto;
-  overflow: hidden;
-}
 .blog{
   padding-bottom:calc(1.5rem - 9px);
 }
@@ -735,7 +726,9 @@ main .container {
   margin: 0 auto;
   max-height: 92px;
 }
-
+.item-title, .article-info a{
+  padding-left: .5rem;
+}
 .category-name {
   margin-left: 0.2rem;
   margin-bottom: 0.2rem;
@@ -940,11 +933,6 @@ footer .container {
 footer .container ul {
   list-style-type: none;
   margin-top: 48px;
-  -webkit-columns: 75px 2;
-  /* Chrome, Safari, Opera */
-  -moz-columns: 75px 2;
-  /* Firefox */
-  columns: 75px 2;
   padding: 0;
 }
 
@@ -1222,6 +1210,16 @@ div[itemprop="articleBody"] .menu-cc img{
 /*	9. Media Queries
   /* -------------------------------------------------------------------------- */
 @media (min-width:590px) {
+
+  .feed-posts, .blog-featured {
+    display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+    grid-gap: 1rem;
+    justify-content: center;
+    list-style: none;
+    margin: 0 auto;
+    overflow: hidden;
+  }
   .feed-post-info, .item-title, .article-info {
     max-height: none;
     width: calc(100% - 18px);
@@ -1265,6 +1263,9 @@ div[itemprop="articleBody"] .menu-cc img{
 
   .feed-post-author-name {
     margin-left: 0;
+  }
+  .item-title, .article-info a{
+    padding-left: 0;
   }
 }
 
@@ -1343,7 +1344,14 @@ div[itemprop="articleBody"] .menu-cc img{
     height: 180px;
   }
 
-
+/* FOOTER */
+footer .container ul{
+  -webkit-columns: 75px 2;
+  /* Chrome, Safari, Opera */
+  -moz-columns: 75px 2;
+  /* Firefox */
+  columns: 75px 2;
+}
 }
 
 @media (min-width:872px) {
@@ -1432,7 +1440,7 @@ div[itemprop="articleBody"] .menu-cc img{
   .item-page {
     max-width: 850px;
     font-size: 1.2rem;
-    margin: 0 auto;
+    margin: 0 auto 1.5rem;
     padding: 2rem 2rem;
     -webkit-box-shadow: 2px 2px 6px 1px rgba(0, 0, 0, 0.5);
     -moz-box-shadow: 2px 2px 6px 1px rgba(0, 0, 0, 0.5);
@@ -1644,7 +1652,7 @@ div[itemprop="articleBody"] .menu-cc img{
 @media (min-width:1500px) {
   .item-page {
     font-size: 1.2rem;
-    margin: 0 auto;
+    margin: 0 auto 1.5rem;
   }
 
   main .author-container {
@@ -1776,7 +1784,7 @@ div[itemprop="articleBody"] .menu-cc img{
 /* Kris new styles */
 .slogan {
   text-align: center;
-  margin: 0 0 40px 0;
+  padding: 0 0 40px 0;
   font-size: 1.2rem;
 }
 
