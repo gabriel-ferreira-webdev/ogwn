@@ -1977,3 +1977,10 @@ ul.social-icons li {
   -webkit-mask-size: cover;
   mask-size: cover;
 }
+
+.social-twitch {
+  -webkit-mask: url(../img/icons/social-twitch.svg) 0 0/24px 24px;
+  mask: url(../img/icons/social-twitch.svg) 0 0/24px 24px;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+}
