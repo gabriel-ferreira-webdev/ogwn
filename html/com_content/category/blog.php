@@ -122,7 +122,11 @@ if ($parentId !== 'root') :
 			<?php echo $profileLeft ?>
 			<div class="author-page-header-side">
 				<h2 class="author-name"><?php echo $this->category->title ?></h2>
-				<?php echo '<div class="bio">' . $bio . '</div>' ?>
+				<?php echo '<div class="bio" id="more-less">' . $bio . '</div>' ?>
+				<button title="Read more/less" type="button" class="link-button" onclick="readMoreToggle()" id="button-more">
+					Read more
+				</button>
+				<div class="clr"></div>
 				<?php echo $links ?>
 				<?php echo $profileLinks ?>
 			</div>
@@ -237,3 +241,8 @@ if ($parentId !== 'root') :
 			<?php echo $this->pagination->getPagesLinks(); ?> </div>
 	<?php endif; ?>
 </div>
+<script>
+  window.onload = () => {
+    initAuthor();
+  };
+</script>

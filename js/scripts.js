@@ -3,8 +3,8 @@
 // var theme_uri = mainTheme.templateUrl;
 
 function readMoreToggle() {
-  const less = 'author-page-header-desc';
-  const more = 'author-page-header-desc-open';
+  const less = 'bio';
+  const more = 'bio-full';
   const elText = document.getElementById('more-less');
   const elLink= document.getElementById('button-more');
 

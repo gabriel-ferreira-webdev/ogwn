@@ -1826,6 +1826,32 @@ footer .container ul{
 
 .bio {
   margin-top: 0.5rem;
+  max-height: 140px;
+  /* margin: 0.8rem 0; */
+  /* line-height: 1.4rem; */
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1.2rem;
+}
+
+.bio-full {
+  margin-top: 0.5rem;
+  max-height: none;
+  overflow: visible;
+  display: block;
+  font-size: 1.2rem;
+}
+
+#button-more {
+  color: #fff;
+  position: relative;
+  font-size: 1rem;
+  top: 0.5rem;
+  right: 1.5rem;
+  font-style: italic;
 }
 
 .flex-row-left {
