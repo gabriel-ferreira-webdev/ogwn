@@ -21,9 +21,9 @@ function initAuthor() {
   const el = document.getElementById('more-less');
   const isOverflow = el.scrollHeight > el.clientHeight;
 
-  if (!isOverflow) {
+  if (isOverflow) {
     const elToHide = document.getElementById('button-more');
-    elToHide.style.display = 'none';
+    elToHide.style.display = 'block';
   }
 };
 

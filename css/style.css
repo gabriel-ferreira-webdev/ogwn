@@ -1850,8 +1850,8 @@ footer .container ul{
   position: relative;
   font-size: 1rem;
   top: 0.5rem;
-  right: 1.5rem;
   font-style: italic;
+  display: none;
 }
 
 .flex-row-left {
