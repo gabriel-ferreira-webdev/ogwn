@@ -1241,7 +1241,7 @@ div[itemprop="articleBody"] .menu-cc img{
   }
 
   .item {
-    min-height: 240px;
+    min-height: 100%;
   }
 
   .feed-post-info, .item-title, .article-info {
@@ -1402,9 +1402,7 @@ footer .container ul{
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   }
 
-  .blog-featured-fp .item {
-    min-height: 169px;
-  }
+
 
   .blog-featured-fp div:nth-child(n+13) {
     display: none;
@@ -1709,9 +1707,7 @@ footer .container ul{
       grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
     }
 
-    .blog-featured-fp .item {
-      min-height: 239px;
-    }
+
 
 }
 
