@@ -785,6 +785,7 @@ main .container {
   text-overflow: ellipsis;
   margin: 3px auto 0;
   color: #009de1;
+  padding-left:.5rem;
 }
 
 
@@ -1225,7 +1226,9 @@ div[itemprop="articleBody"] .menu-cc img{
     width: calc(100% - 18px);
     margin: 0 auto;
   }
-
+.item h2 {
+  padding-left:0;
+}
   .feed-post-thumb, .item-image {
     width: 100%;
   }
