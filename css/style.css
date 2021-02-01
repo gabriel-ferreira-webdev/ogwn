@@ -24,6 +24,10 @@ Author: OGWN Team
 /* -------------------------------------------------------------------------- */
 /*	0. CSS Reset
 /* -------------------------------------------------------------------------- */
+/* HIDE CONTENT CREATORS */
+.chris-rice,.derrick-broze,.ernie-hancock,.gina-carr,.howard-lichtman,.jay-parker,.jose-perez,.justin-deschamps,.kathy-buckalew,.max-igan,.mitoa-edjang,.paul-conant,.tim-smith,.kris-nelson{
+  display:none!important;
+}
 .ToolTip{display:none!important;}
 .ogwn-coming-soon {
   position: absolute;
@@ -246,9 +250,7 @@ header a:link, header a:visited {
   text-align: right;
 }
 
-#search-cb {
-  display: none;
-}
+
 
 .search {
   width: calc(100% - 1rem);
@@ -1554,7 +1556,7 @@ footer .container ul{
   .header-searchform input[type=checkbox]:checked~#search-cb-label .search-open {
     background-image: url("../img/icons/arrow.png");
   }
-
+#search-cb{display:none;}
   #search-cb-label {
     display: inline-block;
     position: absolute;
