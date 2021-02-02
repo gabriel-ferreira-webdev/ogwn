@@ -123,12 +123,9 @@ else {
 <script type="text/javascript" src="<?php echo $this->baseurl ?>
 /templates/<?php echo $this->template ?>/js/scripts.js"></script>
 <script type="text/javascript">
-  console.log('custom');
   jQuery(document).ready(function() {
-    console.log('ready');
     const regex = new RegExp("^https?://(www.)?(?:onegreatworknetwork.com|localhost).*");
     jQuery("a").each(function() {
-      console.log('this',this);
       if (/^http/.test(this.href) && !(regex.test(this.href))) {
           jQuery(this).attr("target", "_blank");
       }

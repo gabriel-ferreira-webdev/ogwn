@@ -123,7 +123,7 @@ a:link, a:visited {
   color: white;
 }
 
-.blog a:link, .blog a:visited, .item-page a:link, .item-page a:visited, .feed-posts a:link, .feed-posts a:visited, .blog-featured a:link, .blog-featured a:visited, .pagination a:link {
+.blog a:link, .blog a:visited, .item-page a:link, .item-page a:visited, .feed-posts a:link, .feed-posts a:visited, .blog-featured a:link, .blog-featured a:visited, .pagination a:link, .pagination a:visited {
   color: #009de1;
 }
 
@@ -195,6 +195,12 @@ header a:link, header a:visited {
   background: #004080;
   padding: 12px 0;
 }
+#finder-filter-window .controls{
+  display:none;
+}
+#finder-filter-window .controls:first-child{
+  display: inline;
+}
 #search-cb{display:none;}
 /* .search-open{
   display:none;
@@ -206,11 +212,6 @@ header a:link, header a:visited {
 .header-searchform input[type=checkbox]:checked~#search-cb-label .search-open {
   background-image: url("../img/icons/close.png")
 }
-
- .search-open {
-  display: none;
-}
-
 #search-button {
   vertical-align: top;
   margin-top: 0.1rem;
@@ -748,7 +749,6 @@ main .container {
 }
 .category-name {
   margin-left: 0.2rem;
-  margin-bottom: 0.2rem;
 }
 
 .item-page .article-info {
@@ -800,7 +800,7 @@ main .container {
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  margin: 3px auto 0;
+  margin: 6px auto 0;
   color: #009de1;
   padding-left:.5rem;
 }
@@ -1777,6 +1777,7 @@ footer .container ul{
 
   .blog-featured-fp{
     position: static;
+    padding-bottom:7px;
   }
 }
 
@@ -2048,7 +2049,7 @@ ul.social-icons li {
   mask-size: cover;
 }
 /* HIDE CONTENT CREATORS */
-.chris-rice,.derrick-broze,.ernie-hancock,.gina-carr,.howard-lichtman,.jay-parker,.jose-perez,.justin-deschamps,.kathy-buckalew,.max-igan,.mitoa-edjang,.paul-conant,.tim-smith,.kris-nelson{
+.chris-rice,.derrick-broze,.ernie-hancock,.gina-carr,.howard-lichtman,.jay-parker,.jose-perez,.justin-deschamps,.kathy-buckalew,.max-igan,.mitoa-edjang,.paul-conant,.tim-smith,.kris-nelson,.dayna-martin{
   display:none!important;
 }
 .ToolTip, .top{display:none!important;}
