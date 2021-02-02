@@ -198,7 +198,7 @@ header a:link, header a:visited {
 #finder-filter-window .controls{
   display:none;
 }
-#finder-filter-window .controls:first-child{
+#finder-filter-window .controls:nth-child(2){
   display: inline;
 }
 #search-cb{display:none;}
