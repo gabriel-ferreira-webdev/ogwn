@@ -18,7 +18,7 @@ $mime = !empty($this->result->mime) ? 'mime-' . $this->result->mime : null;
 $catidslug= $this->result->catslug;
 $author=trim(substr($catidslug, strpos($catidslug, ':') + 1));;
 // $author=$this->result->created_by;
- echo "<a href='".$this->baseurl."/".$author."'>".$this->result->author."</a>";
+
 ?>
 
 <?php
@@ -66,20 +66,36 @@ if (!empty($this->query->highlight)
 }
 
 ?>
-<li>
-	<h4 class="result-title <?php echo $mime; ?>">
+<?php
+use Joomla\CMS\Uri\Uri;
+
+ $imgsXplode = explode('"',$this->result->images);
+ $introImg = $imgsXplode[3];
+; ?>
+<li class="feed-post">
+  <div class="feed-post-thumb">
+      <a class="feed-post-thumb-a" href="<?php echo JRoute::_($route); ?>" style='background-image:url(<?php echo Uri::root(),str_replace("\\", "",$introImg); ?>)'></a>
+  </div>
+
+	<h4 class="result-title <?php echo $mime; ?> item-title">
 		<a href="<?php echo JRoute::_($route); ?>">
 			<?php echo $this->result->title; ?>
 		</a>
 	</h4>
-	<?php if ($show_description && $description !== '') : ?>
+	<!-- <?php if ($show_description && $description !== '') : ?>
 		<p class="result-text<?php echo $this->pageclass_sfx; ?>">
 			<?php echo $description; ?>
 		</p>
-	<?php endif; ?>
+	<?php endif; ?> -->
+
+
+<div class="article-info">
+   <?php  echo "<a class='category-name' href='".$this->baseurl."/".$author."'>".$this->result->category."</a>"; ?>
+</div>
+
 	<?php if ($this->params->get('show_url', 1)) : ?>
-		<div class="small result-url<?php echo $this->pageclass_sfx; ?>">
+		<!-- <div class="small result-url<?php echo $this->pageclass_sfx; ?>">
 			<?php echo $this->baseUrl, JRoute::_($this->result->route); ?>
-		</div>
+		</div> -->
 	<?php endif; ?>
 </li>
