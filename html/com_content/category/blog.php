@@ -49,7 +49,7 @@ if ($parentId !== 'root') :
 	$profileLeft = '';
 	$bio = '';
 	$email = '';
-	$profileLinks = '<ul class="social-icons">';
+	$socialLinks = '<div class="social-icons">';
 	$site1 = new \stdClass();
 	$site2 = new \stdClass();
 	$site3 = new \stdClass();
@@ -81,7 +81,7 @@ if ($parentId !== 'root') :
 			elseif ($k === 'website3-url') :
 				$site3->url = $text;
 			elseif (strpos($k, 'social-') !== false) :
-				$profileLinks .= '<li><a target="_blank" href="' . $text . '"><span class="social-icon ' . $k . '"></span></a></li>';
+				$socialLinks .= '<div><a target="_blank" href="' . $text . '"><span class="social-icon ' . $k . '"></span></a></div>';
 			elseif (strpos($k, 'avatar') !== false) :
 				$profileLeft = '<div class="author-page-header-profile ' . $k . '">
 					<img class="avatar avatar-300 photo" src="' . $text . '" />
@@ -93,7 +93,7 @@ if ($parentId !== 'root') :
 		endif;
 	endforeach;
 
-	$profileLinks .= '</ul>';
+	$socialLinks .= '</div>';
 	$links = '<div><div class="links">';
 
 	if (array_key_exists('url', $site1) || array_key_exists('url', $site2) || array_key_exists('url', $site3)) :
@@ -128,7 +128,7 @@ if ($parentId !== 'root') :
 				</button>
 				<div class="clr"></div>
 				<?php echo $links ?>
-				<?php echo $profileLinks ?>
+				<?php echo $socialLinks ?>
 			</div>
 		</div>
 	</div>

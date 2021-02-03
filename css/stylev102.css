@@ -1910,16 +1910,15 @@ footer .container ul{
   margin-top: 1rem;
 }
 
-ul.social-icons {
-  list-style: none;
-  float: left;
-  padding: 0;
+div.social-icons {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 3px;
   margin-top: 1rem;
   margin-bottom: 0;
 }
 
-ul.social-icons li {
-  display: inline-block;
+div.social-icons div {
   width: inherit;
   padding: 0;
   margin: 0 0.5rem;
@@ -2048,6 +2047,28 @@ ul.social-icons li {
   -webkit-mask-size: cover;
   mask-size: cover;
 }
+
+.social-telegram {
+  -webkit-mask: url(../img/icons/social-telegram.svg) 0 0/24px 24px;
+  mask: url(../img/icons/social-telegram.svg) 0 0/24px 24px;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+}
+
+.social-dlive {
+  -webkit-mask: url(../img/icons/social-dlive.svg) 0 0/24px 24px;
+  mask: url(../img/icons/social-dlive.svg) 0 0/24px 24px;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+}
+
+.social-applepodcasts {
+  -webkit-mask: url(../img/icons/social-applepodcasts.svg) 0 0/24px 24px;
+  mask: url(../img/icons/social-applepodcasts.svg) 0 0/24px 24px;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+}
+
 /* HIDE CONTENT CREATORS */
 .chris-rice,.derrick-broze,.ernie-hancock,.gina-carr,.howard-lichtman,.jay-parker,.jose-perez,.justin-deschamps,.kathy-buckalew,.max-igan,.mitoa-edjang,.paul-conant,.tim-smith,.kris-nelson{
   display:none!important;
