@@ -9,7 +9,7 @@
   <title>One Great Work Network</title>
 <jdoc:include type="head" />
 <link rel="stylesheet" href="<?php echo $this->baseurl ?>
-/templates/<?php echo $this->template ?>/css/stylev102.css" type="text/css" />
+/templates/<?php echo $this->template ?>/css/stylev103.css" type="text/css" />
 <meta property="og:image" content="img/ogwn-splash.jpg" />
 <meta property="og:title" content="One Great Work Network" />
 <meta property="og:description" content="Ending Slavery, One Mind At A Time." />
