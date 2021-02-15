@@ -2069,5 +2069,12 @@ div.social-icons div {
   mask-size: cover;
 }
 
+.social-brandnewtube {
+  -webkit-mask: url(../img/icons/social-brandnewtube.svg) 0 0/24px 24px;
+  mask: url(../img/icons/social-brandnewtube.svg) 0 0/24px 24px;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+}
+
 
 .ToolTip, .top{display:none!important;}
