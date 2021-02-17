@@ -9,7 +9,7 @@
   <title>One Great Work Network</title>
 <jdoc:include type="head" />
 <link rel="stylesheet" href="<?php echo $this->baseurl ?>
-/templates/<?php echo $this->template ?>/css/stylev104.css" type="text/css" />
+/templates/<?php echo $this->template ?>/css/stylev105.css" type="text/css" />
 <link rel="stylesheet" href="<?php echo $this->baseurl ?>
 /templates/<?php echo $this->template ?>/css/custom.css" type="text/css" />
 <meta property="og:image" content="img/ogwn-splash.jpg" />
@@ -70,10 +70,8 @@ PROPERLY IMPLEMENT HEADER AND FOOTER MODULES AND COMPONENT
       <?php $app = JFactory::getApplication();
       if ($app->getMenu()->getActive()->home) {
       ?>
-<div class="player-title">
       <jdoc:include type="modules" name="live"/>
       <jdoc:include type="modules" name="live-title"/>
-</div>
 <?php
 }
 else {

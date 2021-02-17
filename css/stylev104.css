@@ -744,6 +744,9 @@ main .container {
   margin: 0 auto;
   max-height: 92px;
 }
+.feed-post-info-random{
+  padding-bottom:7px;
+}
 .item-title, .article-info a{
   padding-left: .5rem;
 }
