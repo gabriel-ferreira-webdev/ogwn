@@ -66,30 +66,7 @@ PROPERLY IMPLEMENT HEADER AND FOOTER MODULES AND COMPONENT
     <div class="bg-gradient">
     </div>
       <div class="container">
-        <?php
-        $app = JFactory::getApplication();
-        if ($app->getMenu()->getActive()->home) {
-        ?>
-          <div class="player-title">
-            <jdoc:include type="modules" name="live"/>
-            <div style='padding-top: 12px;' class='live-title'>
-              <span>Now Playing:</span>
-              <span id="vlc-title">
-                <?php include 'videoplayer/VLCPlaying.txt'; ?>
-              </span>
-              <script>
-              const vlcTitle = document.getElementById('vlc-title');
-              setInterval(function() {
-                fetch('videoplayer/VLCPlaying.txt')
-                  .then(response => response.text())
-                  .then(text => vlcTitle.innerHTML = text);
-              }, 1000 * 60);
-              </script>
-            </div>
-          </div>
-        <?php
-        }
-        ?>
+
         <jdoc:include type="modules" name="featured"/>
         <span class="titles">
           <jdoc:include type="modules" name="titles"/>
