@@ -614,8 +614,12 @@ main .container {
   text-align: left;
   font-size: 22px;
   font-family: "sourceSansPro-SemiBold";
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-
 /* POSTS FEED  */
 /* .primary-sidebar div>nav {
   display: grid;
@@ -1305,6 +1309,8 @@ div[itemprop="articleBody"] .menu-cc img{
   .live-title, #header-live {
     width: auto;
   }
+
+
 
   /* AUTHOR PAGE */
   /* AUTHOR PAGE INFORMATION */
