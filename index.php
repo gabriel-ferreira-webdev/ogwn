@@ -9,7 +9,7 @@
   <title>One Great Work Network</title>
 <jdoc:include type="head" />
 <link rel="stylesheet" href="<?php echo $this->baseurl ?>
-/templates/<?php echo $this->template ?>/css/stylev107.css" type="text/css" />
+/templates/<?php echo $this->template ?>/css/stylev108.css" type="text/css" />
 <link rel="stylesheet" href="<?php echo $this->baseurl ?>
 /templates/<?php echo $this->template ?>/css/custom.css" type="text/css" />
 <meta property="og:image" content="img/ogwn-splash.jpg" />

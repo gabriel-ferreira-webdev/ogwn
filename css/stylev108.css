@@ -614,9 +614,8 @@ main .container {
   text-align: left;
   font-size: 22px;
   font-family: "sourceSansPro-SemiBold";
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
+  width: 100%;
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
