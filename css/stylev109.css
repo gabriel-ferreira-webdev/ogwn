@@ -2091,5 +2091,12 @@ div.social-icons div {
   mask-size: cover;
 }
 
+.social-odysee {
+  -webkit-mask: url(../img/icons/social-odysee.svg) 0 0/24px 24px;
+  mask: url(../img/icons/social-odysee.svg) 0 0/24px 24px;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+}
+
 
 .ToolTip, .top{display:none!important;}
