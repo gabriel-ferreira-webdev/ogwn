@@ -9,7 +9,36 @@
 
 defined('_JEXEC') or die;
 
+if (isset($images->image_intro) and !empty($images->image_intro))
+{
+  $timage= htmlspecialchars(JURI::root().$images->image_intro);
+}
+elseif (isset($images->image_fulltext) and !empty($images->image_fulltext))
+{
+  $timage= htmlspecialchars(JURI::root().$images->image_fulltext);
+}
+else
+{
+  $timage= 'https://www.joomlawire.com/joomla3/images/joomla_logo_black.webp';
+}
+$doc = JFactory::getDocument();
+$doc->addCustomTag( '
+  <meta name="twitter:title" content="'.$this->escape($this->item->title).'">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="'.str_replace('" ','&quot;',JURI::current()).'"="">
+  <meta name="twitter:image" content="'.$timage.'">
+  <meta property="og:type" content="article"/>
+  <meta property="og:url" content="'.str_replace('" ','&quot;',juri::current()).'"="">
+  <meta property="og:image" content="'.$timage.'"/>
+  <meta property="og:site_name" content="One Great Work Network"/>
+  <meta property="fb:admins" content="xxxxxxxxxxx"/>
+  <meta property="og:description" content="'.substr(strip_tags($this->item->introtext), 0,45).'"/>
+  <meta name="twitter:description" content="'.mb_strimwidth(strip_tags($this->item->introtext),0,45).'"/>
+');
+
 JHtml::addIncludePath(JPATH_COMPONENT . '/helpers');
+
+
 
 // Create shortcuts to some parameters.
 $params  = $this->item->params;
@@ -21,6 +50,8 @@ $info    = $params->get('info_block_position', 0);
 // Check if associations are implemented. If they are, define the parameter.
 $assocParam = (JLanguageAssociations::isEnabled() && $params->get('show_associations'));
 JHtml::_('behavior.caption');
+
+
 
 ?>
 <div class="item-page<?php echo $this->pageclass_sfx; ?>" itemscope itemtype="https://schema.org/Article">

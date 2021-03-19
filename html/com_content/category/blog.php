@@ -9,8 +9,11 @@
 
 defined('_JEXEC') or die;
 
+
 use Joomla\CMS\Factory;
 use Joomla\CMS\Plugin\PluginHelper;
+
+
 
 JHtml::addIncludePath(JPATH_COMPONENT . '/helpers');
 
@@ -56,6 +59,31 @@ if ($parentId !== 'root') :
 
 	$userProfile = JUserHelper::getProfile($userId);
 
+	if (isset($images->image_intro) and !empty($images->image_intro))
+	{
+	  $timage= htmlspecialchars(JURI::root().$images->image_intro);
+	}
+	elseif (isset($images->image_fulltext) and !empty($images->image_fulltext))
+	{
+	  $timage= htmlspecialchars(JURI::root().$images->image_fulltext);
+	}
+	else
+	{
+	  $timage= 'https://www.joomlawire.com/joomla3/images/joomla_logo_black.webp';
+	};
+$doc = JFactory::getDocument();
+	$doc->addCustomTag( '
+	  <meta name="twitter:title" content="'.$this->escape($this->category->title).'">
+	  <meta name="twitter:card" content="summary_large_image">
+	  <meta name="twitter:url" content="'.str_replace('" ','&quot;',JURI::current()).'"="">
+	  <meta property="og:title" content="'.$this->escape($this->category->title).'"/>
+	  <meta property="og:type" content="profile"/>
+	  <meta property="og:url" content="'.str_replace('" ','&quot;',juri::current()).'"="">
+		<meta property="og:image:width" content="580" />
+	  <meta property="og:site_name" content="One Great Work Network"/>
+	  <meta property="fb:admins" content="xxxxxxxxxxx"/>
+	');
+
 	/*echo "<pre>";
 	print_r($result);
 	echo "</pre>";*/
@@ -66,8 +94,16 @@ if ($parentId !== 'root') :
 		if ($text !== '') :
 			if ($k === 'bio') :
 				$bio = $text;
+					$doc->addCustomTag( '
+					<meta property="og:description" content="'.substr(strip_tags($bio), 0,45).'"/>
+				  <meta name="twitter:description" content="'.mb_strimwidth(strip_tags($bio),0,45).'"/>
+						');
 			elseif ($k === 'email') :
 			 $email = $text;
+			 $doc->addCustomTag( '
+			 	  <meta property="og:email" content="'.$email.'";/>
+				 ');
+
 			elseif ($k === 'website1-title') :
 				$site1->title = $text;
 			elseif ($k === 'website1-url') :
@@ -88,11 +124,15 @@ if ($parentId !== 'root') :
 					<nav class="author-donate">
 						<a href="' . $catAlias . '/donate/">DONATE TO<br>' . $name . '</a>
 					</nav>
-				</div>';
+				</div>'
+				;
+				$doc->addCustomTag( '
+		<meta name="twitter:image" content="'.str_replace('" ','&quot;',JURI::base()).$text.'">
+				<meta property="og:image" content="'.str_replace('" ','&quot;',JURI::base()).$text.'"/>
+					');
 			endif;
 		endif;
 	endforeach;
-
 	$socialLinks .= '</div>';
 	$links = '<div><div class="links">';
 

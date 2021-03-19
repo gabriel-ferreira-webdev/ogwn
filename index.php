@@ -1,4 +1,3 @@
-
 <?php defined('_JEXEC') or die('Restricted access');?>
 
 <!DOCTYPE html>
@@ -6,15 +5,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>One Great Work Network</title>
-<jdoc:include type="head" />
+<jdoc:include type="head"/>
 <link rel="stylesheet" href="<?php echo $this->baseurl ?>
 /templates/<?php echo $this->template ?>/css/stylev109.css" type="text/css" />
 <link rel="stylesheet" href="<?php echo $this->baseurl ?>
 /templates/<?php echo $this->template ?>/css/custom.css" type="text/css" />
-<meta property="og:image" content="img/ogwn-splash.jpg" />
-<meta property="og:title" content="One Great Work Network" />
-<meta property="og:description" content="Ending Slavery, One Mind At A Time." />
 </head>
 <body>
   <div class="page-wrap">
@@ -56,7 +51,6 @@
 <!--
 PROPERLY IMPLEMENT HEADER AND FOOTER MODULES AND COMPONENT
  <jdoc:include type="modules" name="top" />
-
 <jdoc:include type="modules" name="footer" /> -->
 <main  role="main">
 
