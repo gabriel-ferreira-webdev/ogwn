@@ -1,4 +1,8 @@
+<!--   <meta property="og:description" content="'.substr(strip_tags($this->item->introtext), 0,150).'"/>
+  <meta name="twitter:description" content="'.mb_strimwidth(strip_tags($this->item->introtext),0,124).'"/>
+  // FIX THIS SO THAT VIDEOS DONT SHOW UP ON TOP OF PAGE -->
 <?php
+
 /**
  * @package     Joomla.Site
  * @subpackage  com_content
@@ -9,17 +13,18 @@
 
 defined('_JEXEC') or die;
 
+$images  = json_decode($this->item->images);
 if (isset($images->image_intro) and !empty($images->image_intro))
 {
   $timage= htmlspecialchars(JURI::root().$images->image_intro);
 }
-elseif (isset($images->image_fulltext) and !empty($images->image_fulltext))
+ elseif (isset($images->image_fulltext) and !empty($images->image_fulltext))
 {
-  $timage= htmlspecialchars(JURI::root().$images->image_fulltext);
-}
+   $timage= htmlspecialchars(JURI::root().$images->image_fulltext);
+ }
 else
 {
-  $timage= 'https://www.joomlawire.com/joomla3/images/joomla_logo_black.webp';
+  $timage= 'https://onegreatworknetwork.com/images/ogwn/ogwn-bg.jpg';
 }
 $doc = JFactory::getDocument();
 $doc->addCustomTag( '
@@ -27,14 +32,17 @@ $doc->addCustomTag( '
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="'.str_replace('" ','&quot;',JURI::current()).'"="">
   <meta name="twitter:image" content="'.$timage.'">
+  <meta property="og:title" content="'.$this->item->title.'"/>
+  <meta property="og:image:alt" content="'.$this->item->title.'"/>
+
   <meta property="og:type" content="article"/>
+  <meta property="article:author" content="'.$this->escape($this->item->category_title).'"/>
   <meta property="og:url" content="'.str_replace('" ','&quot;',juri::current()).'"="">
   <meta property="og:image" content="'.$timage.'"/>
   <meta property="og:site_name" content="One Great Work Network"/>
-  <meta property="fb:admins" content="xxxxxxxxxxx"/>
-  <meta property="og:description" content="'.substr(strip_tags($this->item->introtext), 0,45).'"/>
-  <meta name="twitter:description" content="'.mb_strimwidth(strip_tags($this->item->introtext),0,45).'"/>
+
 ');
+
 
 JHtml::addIncludePath(JPATH_COMPONENT . '/helpers');
 
@@ -46,6 +54,8 @@ $urls    = json_decode($this->item->urls);
 $canEdit = $params->get('access-edit');
 $user    = JFactory::getUser();
 $info    = $params->get('info_block_position', 0);
+
+
 
 // Check if associations are implemented. If they are, define the parameter.
 $assocParam = (JLanguageAssociations::isEnabled() && $params->get('show_associations'));

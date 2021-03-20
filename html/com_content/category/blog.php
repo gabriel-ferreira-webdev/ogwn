@@ -59,24 +59,13 @@ if ($parentId !== 'root') :
 
 	$userProfile = JUserHelper::getProfile($userId);
 
-	if (isset($images->image_intro) and !empty($images->image_intro))
-	{
-	  $timage= htmlspecialchars(JURI::root().$images->image_intro);
-	}
-	elseif (isset($images->image_fulltext) and !empty($images->image_fulltext))
-	{
-	  $timage= htmlspecialchars(JURI::root().$images->image_fulltext);
-	}
-	else
-	{
-	  $timage= 'https://www.joomlawire.com/joomla3/images/joomla_logo_black.webp';
-	};
 $doc = JFactory::getDocument();
 	$doc->addCustomTag( '
-	  <meta name="twitter:title" content="'.$this->escape($this->category->title).'">
+	  <meta name="twitter:title" content="'.$this->escape($this->category->title).' - One Great Work Network">
 	  <meta name="twitter:card" content="summary_large_image">
 	  <meta name="twitter:url" content="'.str_replace('" ','&quot;',JURI::current()).'"="">
-	  <meta property="og:title" content="'.$this->escape($this->category->title).'"/>
+	  <meta property="og:title" content="'.$this->escape($this->category->title).' - One Great Work Network"/>
+	  <meta property="og:image:alt" content="'.$this->escape($this->category->title).'"/>
 	  <meta property="og:type" content="profile"/>
 	  <meta property="og:url" content="'.str_replace('" ','&quot;',juri::current()).'"="">
 		<meta property="og:image:width" content="580" />
@@ -95,8 +84,8 @@ $doc = JFactory::getDocument();
 			if ($k === 'bio') :
 				$bio = $text;
 					$doc->addCustomTag( '
-					<meta property="og:description" content="'.substr(strip_tags($bio), 0,45).'"/>
-				  <meta name="twitter:description" content="'.mb_strimwidth(strip_tags($bio),0,45).'"/>
+					<meta property="og:description" content="'.substr(strip_tags($bio), 0,150).'"/>
+				  <meta name="twitter:description" content="'.mb_strimwidth(strip_tags($bio),0,124).'"/>
 						');
 			elseif ($k === 'email') :
 			 $email = $text;
