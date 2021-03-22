@@ -62,6 +62,7 @@ if ($parentId !== 'root') :
 $doc = JFactory::getDocument();
 	$doc->addCustomTag( '
 	  <meta name="twitter:title" content="'.$this->escape($this->category->title).' - One Great Work Network">
+	  <meta name="twitter:text:title" content="'.$this->escape($this->category->title).' - One Great Work Network">
 	  <meta name="twitter:card" content="summary_large_image">
 	  <meta name="twitter:url" content="'.str_replace('" ','&quot;',JURI::current()).'"="">
 	  <meta property="og:title" content="'.$this->escape($this->category->title).' - One Great Work Network"/>

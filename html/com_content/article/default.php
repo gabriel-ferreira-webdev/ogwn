@@ -29,6 +29,7 @@ else
 $doc = JFactory::getDocument();
 $doc->addCustomTag( '
   <meta name="twitter:title" content="'.$this->escape($this->item->title).'">
+  <meta name="twitter:text:title" content="'.$this->escape($this->item->title).'">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="'.str_replace('" ','&quot;',JURI::current()).'"="">
   <meta name="twitter:image" content="'.$timage.'">
