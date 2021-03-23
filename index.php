@@ -6,32 +6,19 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <?php
-  use Joomla\CMS\Factory;
 
-  $menuname = Factory::getApplication()->getMenu()->getActive()->title;
    ?>
 
 
-                <meta property="og:title" content="<?php echo $menuname; ?> - One Great Work Network"/>
+
+
 <jdoc:include type="head"/>
 <link rel="stylesheet" href="<?php echo $this->baseurl ?>
 /templates/<?php echo $this->template ?>/css/stylev109.css" type="text/css" />
 <link rel="stylesheet" href="<?php echo $this->baseurl ?>
 /templates/<?php echo $this->template ?>/css/custom.css" type="text/css" />
-<meta name="twitter:image" content="https://onegreatworknetwork.com/images/ogwn/ogwn-bg.jpg">
-  <meta property="og:image" content="https://onegreatworknetwork.com/images/ogwn/ogwn-bg.jpg"/>
-  	  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="<?php echo $menuname; ?> - One Great Work Network">
-  <meta name="twitter:text:title" content="<?php echo $menuname; ?> - One Great Work Network">
-          	  <meta property="og:type" content="website"/>
-          	  <meta property="og:description" content="One Great Work Network - Ending Slavery, One Mind At A Time."/>
 
-              <?php
-              $doc = JFactory::getDocument();
-              	$doc->addCustomTag( '
-	  <meta property="og:url" content="'.str_replace('" ','&quot;',juri::current()).'"="">
-    	');
-               ?>
+
 </head>
 <body>
   <div class="page-wrap">

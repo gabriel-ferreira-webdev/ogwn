@@ -13,36 +13,6 @@
 
 defined('_JEXEC') or die;
 
-$images  = json_decode($this->item->images);
-if (isset($images->image_intro) and !empty($images->image_intro))
-{
-  $timage= htmlspecialchars(JURI::root().$images->image_intro);
-}
- elseif (isset($images->image_fulltext) and !empty($images->image_fulltext))
-{
-   $timage= htmlspecialchars(JURI::root().$images->image_fulltext);
- }
-else
-{
-  $timage= 'https://onegreatworknetwork.com/images/ogwn/ogwn-bg.jpg';
-}
-$doc = JFactory::getDocument();
-$doc->addCustomTag( '
-  <meta name="twitter:title" content="'.$this->escape($this->item->title).'">
-  <meta name="twitter:text:title" content="'.$this->escape($this->item->title).'">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="'.str_replace('" ','&quot;',JURI::current()).'"="">
-  <meta name="twitter:image" content="'.$timage.'">
-  <meta property="og:title" content="'.$this->item->title.'"/>
-  <meta property="og:image:alt" content="'.$this->item->title.'"/>
-
-  <meta property="og:type" content="article"/>
-  <meta property="article:author" content="'.$this->escape($this->item->category_title).'"/>
-  <meta property="og:url" content="'.str_replace('" ','&quot;',juri::current()).'"="">
-  <meta property="og:image" content="'.$timage.'"/>
-  <meta property="og:site_name" content="One Great Work Network"/>
-
-');
 
 
 JHtml::addIncludePath(JPATH_COMPONENT . '/helpers');
