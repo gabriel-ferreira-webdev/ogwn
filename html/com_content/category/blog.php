@@ -39,6 +39,15 @@ $catAlias = $this->category->alias;
 $parentId = $this->category->parent_id;
 $title = $this->category->title;
 
+// this adds open graph data to the "All Content" category
+if ($parentId == 'root') :
+$doc = JFactory::getDocument();
+$doc->addCustomTag( '
+<meta name="twitter:image" content="https://onegreatworknetwork.com/images/ogwn/ogwn-bg.jpg">
+<meta property="og:image" content="https://onegreatworknetwork.com/images/ogwn/ogwn-bg.jpg"/>
+	');
+endif;
+
 if ($parentId !== 'root') :
 	$db->setQuery(
 		'SELECT DISTINCT(u.id), u.name FROM #__users u, #__user_profiles up, #__categories ca'
@@ -256,13 +265,7 @@ $doc = JFactory::getDocument();
 			<?php endif; ?>
 			<?php echo $this->pagination->getPagesLinks(); ?> </div>
 	<?php
-	// this adds open graph data to the "All Content" category
-else:
-	$doc = JFactory::getDocument();
-	$doc->addCustomTag( '
-<meta name="twitter:image" content="https://onegreatworknetwork.com/images/ogwn/ogwn-bg.jpg">
-	<meta property="og:image" content="https://onegreatworknetwork.com/images/ogwn/ogwn-bg.jpg"/>
-		');
+
 endif; ?>
 </div>
 <script>
