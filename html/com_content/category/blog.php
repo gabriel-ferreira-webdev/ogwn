@@ -101,12 +101,13 @@ $doc = JFactory::getDocument();
 					</nav>
 				</div>'
 				;
-				$doc->addCustomTag( '
-		<meta name="twitter:image" content="'.str_replace('" ','&quot;',JURI::base()).$text.'">
-				<meta property="og:image" content="'.str_replace('" ','&quot;',JURI::base()).$text.'"/>
-					');
+					$doc->addCustomTag( '
+			<meta name="twitter:image" content="'.str_replace('" ','&quot;',JURI::base()).$text.'">
+					<meta property="og:image" content="'.str_replace('" ','&quot;',JURI::base()).$text.'"/>
+						');
 			endif;
 		endif;
+
 	endforeach;
 	$socialLinks .= '</div>';
 	$links = '<div><div class="links">';
@@ -254,7 +255,15 @@ $doc = JFactory::getDocument();
 				<p class="counter pull-right"> <?php echo $this->pagination->getPagesCounter(); ?> </p>
 			<?php endif; ?>
 			<?php echo $this->pagination->getPagesLinks(); ?> </div>
-	<?php endif; ?>
+	<?php
+	// this adds open graph data to the "All Content" category
+else:
+	$doc = JFactory::getDocument();
+	$doc->addCustomTag( '
+<meta name="twitter:image" content="https://onegreatworknetwork.com/images/ogwn/ogwn-bg.jpg">
+	<meta property="og:image" content="https://onegreatworknetwork.com/images/ogwn/ogwn-bg.jpg"/>
+		');
+endif; ?>
 </div>
 <script>
   window.onload = () => {
