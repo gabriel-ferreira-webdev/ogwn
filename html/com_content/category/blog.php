@@ -43,8 +43,8 @@ $title = $this->category->title;
 if ($parentId == 'root') :
 $doc = JFactory::getDocument();
 $doc->addCustomTag( '
-<meta name="twitter:image" content="https://onegreatworknetwork.com/images/ogwn/ogwn-bg.jpg">
-<meta property="og:image" content="https://onegreatworknetwork.com/images/ogwn/ogwn-bg.jpg"/>
+<meta name="twitter:image" content="https://onegreatworknetwork.com/images/ogwn/ogwn-card.jpg">
+<meta property="og:image" content="https://onegreatworknetwork.com/images/ogwn/ogwn-card.jpg"/>
 	');
 endif;
 
