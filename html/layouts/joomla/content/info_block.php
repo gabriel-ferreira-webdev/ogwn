@@ -18,7 +18,7 @@ $showAvatar = 0;
 $avatar = '';
 $showArticleBodyLine = 0;
 
-if (!preg_match('/(about|all|all-content|creators|donate|featured|schedule)$/', $url)) {
+if (!preg_match('/(about|all|all-content|creators|featured|schedule)$/', $url)) {
   $showAvatar = 1;
 	$showArticleBodyLine = 1;
 }
